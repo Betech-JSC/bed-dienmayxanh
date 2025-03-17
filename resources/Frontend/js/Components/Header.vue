@@ -3,9 +3,9 @@
         <div class="container mx-auto flex justify-between items-center py-3 px-4">
             <!-- Logo + Navigation -->
             <div class="flex items-center space-x-6">
-                <router-link to="/" class="btnlogo">
+                <Link to="/" class="btnlogo">
                     <img src="https://cdn.tgdd.vn/mwgcart/tan-tam/images/logo.png" alt="Logo" width="122" height="55" />
-                </router-link>
+                </Link>
                 <router-link to="/gioi-thieu" class="text-white hover:text-blue-500 transition font-medium">
                     Giới thiệu
                 </router-link>
