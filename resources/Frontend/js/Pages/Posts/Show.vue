@@ -3,7 +3,9 @@
         <section class="pt-[84px] md:pt-[100px] lg:pt-[120px] xl:pt-[160px] pb-10 md:pb-14 xl:pb-20">
             <div class="container">
                 <div class="grid grid-cols-12 gap-y-4 md:gap-y-6 xl:gap-y-8 md:gap-x-6 xl:gap-x-10">
-                    <div class="xl:col-span-8 xl:col-start-3 space-y-3 text-center md:col-span-10 md:col-start-2 col-span-full">
+                    <div
+                        class="xl:col-span-8 xl:col-start-3 space-y-3 text-center md:col-span-10 md:col-start-2 col-span-full"
+                    >
                         <div
                             class="w-fit px-[10px] rounded-full bg-[#2F49D9] title-3 font-bold text-white font-display mx-auto"
                         >
@@ -37,7 +39,7 @@
             </div>
         </section>
 
-        <section class="bg-[#F4EFE2]" v-if="related_posts && related_posts.length > 0">
+        <section v-if="related_posts && related_posts.length > 0">
             <div class="container py-12 grid grid-cols-12 max-md:pt-5 relative">
                 <div class="col-span-full flex justify-between">
                     <p class="display-3 text-black-fks font-display font-bold">Các bài viết liên quan</p>
