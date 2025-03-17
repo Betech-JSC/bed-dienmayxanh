@@ -12,36 +12,6 @@
         <span>{{ tt('models.table_list.posts') }}</span>
     </Link>
     <Link
-        v-if="can('admin.contacts.index')"
-        :href="route('admin.contacts.index')"
-        :class="{ active: isUrl('admin.contacts.*') }"
-        class="item"
-    >
-        <material-symbols:connect-without-contact />
-        <span>{{ tt('models.table_list.contacts') }}</span>
-        <span class="badge badge-danger" v-if="newContact">{{ newContact }}</span>
-    </Link>
-    <Link
-        v-if="can('admin.contact-checkout-resources.index')"
-        :href="route('admin.contact-checkout-resources.index')"
-        :class="{ active: isUrl('admin.contact-checkout-resources.*') }"
-        class="item"
-    >
-        <material-symbols:connect-without-contact />
-        <span> Đơn hàng tài nguyên </span>
-        <span class="badge badge-danger" v-if="newContactResource">{{ newContactResource }}</span>
-    </Link>
-    <Link
-        v-if="can('admin.contact-checkout-courses.index')"
-        :href="route('admin.contact-checkout-courses.index')"
-        :class="{ active: isUrl('admin.contact-checkout-courses.*') }"
-        class="item"
-    >
-        <material-symbols:connect-without-contact />
-        <span> Đơn hàng khóa học </span>
-        <span class="badge badge-danger" v-if="newContactCourse">{{ newContactCourse }}</span>
-    </Link>
-    <Link
         v-if="can('admin.post-categories.index')"
         :href="route('admin.post-categories.index')"
         :class="{ active: isUrl('admin.post-categories.*') }"
@@ -60,16 +30,6 @@
         <span>{{ tt('models.table_list.course-categories') }}</span>
     </Link>
     <Link
-        v-if="can('admin.resource-categories.index')"
-        :href="route('admin.resource-categories.index')"
-        :class="{ active: isUrl('admin.resource-categories.*') }"
-        class="item"
-    >
-        <bx:category />
-        <span>{{ tt('models.table_list.resource-categories') }}</span>
-    </Link>
-
-    <Link
         v-if="can('admin.services.index')"
         :href="route('admin.services.index')"
         :class="{ active: isUrl('admin.services.*') }"
@@ -77,15 +37,6 @@
     >
         <bx:category />
         <span>{{ tt('models.table_list.services') }}</span>
-    </Link>
-    <Link
-        v-if="can('admin.members.index')"
-        :href="route('admin.members.index')"
-        :class="{ active: isUrl('admin.members.*') }"
-        class="item"
-    >
-        <bx:category />
-        <span>{{ tt('models.table_list.members') }}</span>
     </Link>
     <Link
         v-if="can('admin.feedback.index')"
@@ -142,15 +93,6 @@
         <span>{{ tt('models.table_list.courses') }}</span>
     </Link>
     <Link
-        v-if="can('admin.resources.index')"
-        :href="route('admin.resources.index')"
-        :class="{ active: isUrl('admin.resources.*') }"
-        class="item"
-    >
-        <material-symbols:connect-without-contact />
-        <span>{{ tt('models.table_list.resources') }}</span>
-    </Link>
-    <Link
         v-if="can('admin.sliders.index')"
         :href="route('admin.sliders.index')"
         :class="{ active: isUrl('admin.sliders.*') }"
@@ -158,15 +100,6 @@
     >
         <bi:sliders2 />
         <span>{{ tt('models.table_list.sliders') }}</span>
-    </Link>
-    <Link
-        v-if="can('admin.policies.index')"
-        :href="route('admin.policies.index')"
-        :class="{ active: isUrl('admin.policies.*') }"
-        class="item"
-    >
-        <material-symbols:policy-outline-sharp />
-        <span>{{ tt('models.table_list.policies') }}</span>
     </Link>
 </template>
 

@@ -3,71 +3,21 @@
         <Hero
             v-if="sliders && sliders.length > 0"
             :slides="sliders"
-            class="pt-[74px] lg:pt-[90px] xl:pt-[112px] bg-hero-transparent w-full bg-cover bg-center bg-no-repeat"
+            class="pt-[74px] lg:pt-[90px] xl:pt-[112px] w-full bg-cover bg-center bg-no-repeat"
         />
+        <div class="bg-gray-100 py-8">
+            <div class="container mx-auto text-center space-y-[32px]">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Thợ Điện Máy XANH Cam kết</h2>
 
-        <section class="relative md:py-[56px] py-[32px]">
-            <div class="absolute w-full h-ful top-0 left-0 z-1">
-                <JPicture src="/assets/images/shap-banner.png" class="w-full h-full" />
+                <ul class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <li v-for="(item, index) in commitments" :key="index" class="flex flex-col items-center">
+                        <img :src="item.image" :alt="item.title" class="w-16 h-16" />
+                        <p class="mt-2 text-gray-700 font-medium">{{ item.title }}</p>
+                    </li>
+                </ul>
             </div>
-            <div class="relative z-2 grid grid-cols-12 space-y-8 container">
-                <div class="xl:col-span-6 col-span-full xl:col-start-4 text-center space-y-6">
-                    <p class="display-2 font-bold font-display text-red-fks">
-                        BẠN ĐẦY SÁNG TẠO, CÁ TÍNH <br />
-                        VÀ FUNKY CŨNG VẬY
-                    </p>
-                    <p class="body-1 text-gray-700 font-normal font-beau">
-                        FunkyStyle là một ngôi nhà đào tạo kiến trúc với bản sắc riêng, phương pháp tiếp cận phần mềm
-                        SÁNG TẠO, tư duy, đề cao CÁ TÍNH cá nhân trong các sản phẩm, luôn được đổi mới để thích nghi,
-                        giáo án bài giảng rõ ràng và thường xuyên cập nhật mới mỗi khóa.
-                    </p>
-                </div>
-                <div class="col-span-12 grid grid-cols-3">
-                    <div v-for="(item, index) in about" :key="index" class="card-nudge space-y-6">
-                        <div class="animated-nudge">
-                            <JPicture
-                                :src="item.image.url"
-                                :alt="item.image.alt"
-                                class="picture-cover w-[100px] h-[100px] md:w-[200px] md:h-[200px] mx-auto"
-                            />
-                        </div>
-                        <div class="">
-                            <h1 class="headline-1 font-display font-bold text-gray-90 text-center">
-                                {{ item.title }}
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-span-full mx-auto">
-                    <Link :href="route('histories.index')" class="btn btn-primary w-fit flex items-center gap-x-2">
-                        <span>{{ tt('Về chúng tôi') }}</span>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="21"
-                            height="20"
-                            viewBox="0 0 21 20"
-                            fill="currentColor"
-                        >
-                            <path
-                                d="M5.5 14.1666L9.66667 9.99992L5.5 5.83325M11.3333 14.1666L15.5 9.99992L11.3333 5.83325"
-                                stroke="currentColor"
-                                stroke-width="1.66667"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                        </svg>
-                    </Link>
-                </div>
-            </div>
-        </section>
-
-        <section class="md:py-[80px] py-[48px] bg-gray-warm-100 relative z-0">
-            <div class="absolute shape-top-course left-[-6px] top-0 z-1">
-                <JPicture src="/assets/images/home/shape-couse-top.png" class="w-[546px] h-[556px] object-cover" />
-            </div>
-            <div class="absolute right-0 translate-x-1/2 top-1/2 -translate-y-1/2 z-1">
-                <JPicture src="/assets/images/home/shape-course-bottom.png" class="w-[546px] h-[1000px] object-cover" />
-            </div>
+        </div>
+        <section class="md:py-[80px] py-[48px]">
             <div v-if="course_categories && course_categories.length" class="space-y-20">
                 <div v-for="(item, index) in course_categories" :key="index">
                     <div class="container space-y-8">
@@ -107,19 +57,10 @@
             </div>
         </section>
 
-        <section class="bg-gray-warm-100 md:py-[80px] py-[48px] relative overflow-hidden">
-            <div class="absolute left-[-340px] top-[-270px] z-1 mix-blend-multiply">
-                <img src="/assets/images/home/shape-product.png" class="w-[1000px] h-[1000px] object-cover" />
-            </div>
-            <div class="absolute right-[-300px] top-1/2 -translate-y-1/2 z-1 mix-blend-multiply">
-                <img src="/assets/images/home/shape-center-product.png" class="w-[1000px] h-[1000px] object-cover" />
-            </div>
-            <div class="absolute left-[-305px] bottom-[-205px] z-1 mix-blend-multiply">
-                <img src="/assets/images/home/shape-end-product.png" class="w-[1000px] h-[1000px] object-cover" />
-            </div>
+        <section class="md:py-[80px] py-[48px] relative overflow-hidden">
             <div class="grid grid-cols-12 space-y-8 container">
                 <div class="lg:col-span-6 lg:col-start-4 col-span-full text-center space-y-6">
-                    <p class="display-2 font-bold font-display text-[#18191E]">Sản phẩm học viên</p>
+                    <p class="display-2 font-bold font-display text-[#18191E]">Sản phẩm</p>
                 </div>
                 <div v-if="products && products.length" class="col-span-12">
                     <div class="relative z-2 xl:p-8 md:p-6 p-4 rounded-[32px] border-red-fks bg-red-fks space-y-[24px]">
@@ -133,12 +74,9 @@
         </section>
 
         <section v-if="feedback && feedback.length" class="relative">
-            <div class="w-full h-full absolute z-2">
-                <img src="assets/images/home/bg-feedback.png" class="w-full h-full object-cover" />
-            </div>
             <div class="space-y-10 container relative z-1 md:py-[80px] py-[56px]">
                 <div class="w-full text-center">
-                    <p class="display-2 font-bold font-display text-black-fks uppercase">Feedback từ học viên</p>
+                    <p class="display-2 font-bold font-display text-black-fks uppercase">Feedback Khách hàng</p>
                 </div>
                 <div class="grid grid-cols-8 col-start-3 gap-8">
                     <div
@@ -193,49 +131,17 @@
                 </div>
             </div>
         </section>
-        <section v-if="resources && resources.length" class="relative">
-            <div class="w-full h-full absolute z-2">
-                <img src="assets/images/home/bg-resource.png" class="w-full h-full object-cover" />
-            </div>
-            <div class="container relative z-1 md:py-[80px] py-[56px]">
-                <div
-                    class="grid grid-cols-12 xl:gap-x-[72px] lg:gap-x-6 max-lg:gap-y-9 p-4 md:p-6 xl:p-8 rounded-[32px] bg-[#2F49D9]"
-                >
-                    <div class="lg:col-span-3 col-span-full space-y-6">
-                        <div
-                            class="py-3 bg-[#CBFF00] uppercase display-3 font-display font-bold text-[#18191E] text-center rounded-xl"
-                        >
-                            Tài nguyên
-                        </div>
 
-                        <Link
-                            :href="route('resources.index')"
-                            class="max-w-[200px] px-[18px] py-[10px] bg-white border border-gray-warm-300 rounded-xl button-1 font-display font-bold text-gray-700 uppercase block text-center"
-                        >
-                            Xem thêm
-                        </Link>
-                    </div>
-                    <div class="lg:col-span-9 col-span-full">
-                        <UIMarqueeResources :items="resources" />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-gray-warm-100 md:py-[80px] py-[56px]">
-            <div class="container">
-                <div
-                    class="grid grid-cols-12 xl:gap-x-[72px] lg:gap-x-6 max-lg:gap-y-9 p-4 md:p-6 xl:p-8 rounded-[32px] bg-[#2F49D9]"
-                >
-                    <div class="lg:col-span-3 col-span-full space-y-6">
-                        <div
-                            class="py-3 bg-[#CBFF00] uppercase headline-1 font-display font-bold text-[#18191E] text-center rounded-xl"
-                        >
-                            Các câu hỏi thường gặp ?
+        <section class="md:py-[80px] py-[48px]">
+            <div v-if="featured_posts && featured_posts.length" class="space-y-20">
+                <div v-for="(item, index) in featured_posts" :key="index">
+                    <div class="container space-y-8">
+                        <h2 class="display-3 text-[#18191E] font-bold font-display uppercase">
+                            {{ item.title }}
+                        </h2>
+                        <div class="relative hidden md:grid grid-cols-2 lg:grid-cols-3 md:gap-6 xl:gap-8">
+                            <CardBlog v-for="(course, index) in item.courses" :key="index" :item="course" />
                         </div>
-                    </div>
-                    <div class="lg:col-span-9 col-span-full space-y-3">
-                        <FAQ :faqItems="faqs" :type="true" />
                     </div>
                 </div>
             </div>
@@ -244,7 +150,7 @@
 </template>
 <script>
 export default {
-    props: ['course_categories', 'sliders', 'products', 'featured_posts', 'feedback', 'resources'],
+    props: ['course_categories', 'sliders', 'products', 'featured_posts', 'feedback'],
     data() {
         return {
             about: [
@@ -268,6 +174,25 @@ export default {
                         url: '/assets/images/about/application.png',
                         alt: 'Ứng dụng',
                     },
+                },
+            ],
+
+            commitments: [
+                {
+                    title: 'ĐÚNG HẸN',
+                    image: 'https://img.tgdd.vn/imgt/f_webp,s_120x120,fit_outside/https://cdn.tgdd.vn/mwgcart/tan-tam//images/common/img_commit-0.H.png',
+                },
+                {
+                    title: 'TAY NGHỀ GIỎI',
+                    image: 'https://img.tgdd.vn/imgt/f_webp,s_120x120,fit_outside/https://cdn.tgdd.vn/mwgcart/tan-tam//images/common/img_commit-2.H.png',
+                },
+                {
+                    title: 'TRUNG THỰC',
+                    image: 'https://img.tgdd.vn/imgt/f_webp,s_120x120,fit_outside/https://cdn.tgdd.vn/mwgcart/tan-tam//images/common/img_commit-4.H.png',
+                },
+                {
+                    title: 'THÂN THIỆN & VUI VẺ',
+                    image: 'https://img.tgdd.vn/imgt/f_webp,s_120x120,fit_outside/https://cdn.tgdd.vn/mwgcart/tan-tam//images/common/img_commit-6.H.png',
                 },
             ],
 

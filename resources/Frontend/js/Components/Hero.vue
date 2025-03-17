@@ -44,9 +44,7 @@
                                             viewBox="0 0 24 24"
                                             class="w-8 h-8 text-black"
                                         >
-                                            <path
-                                                d="M8 5v14l11-7z"
-                                            />
+                                            <path d="M8 5v14l11-7z" />
                                         </svg>
                                     </button>
                                 </div>
@@ -89,7 +87,7 @@
                                     :key="indexDot"
                                     @click="navigate(indexDot)"
                                     class="h-[8px] w-[80px] rounded-[800px] cursor-pointer"
-                                    :class="indexDot === selectedIndex ? 'bg-[#D34000]' : ' bg-white'"
+                                    :class="indexDot === selectedIndex ? 'bg-[#082680]' : ' bg-white'"
                                 ></div>
                             </div>
                         </div>
@@ -111,24 +109,26 @@ export default {
     data() {
         return {
             playingIndex: null, // Lưu trữ index của video đang phát
-        };
+        }
     },
     methods: {
         playVideo(index) {
-            this.playingIndex = index; // Cập nhật video được phát
+            this.playingIndex = index // Cập nhật video được phát
         },
         getYouTubeEmbedUrl(link) {
-            const videoId = link.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/);
-            return videoId ? `https://www.youtube.com/embed/${videoId[1]}?autoplay=1` : '';
+            const videoId = link.match(
+                /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/
+            )
+            return videoId ? `https://www.youtube.com/embed/${videoId[1]}?autoplay=1` : ''
         },
     },
     mounted() {
-        const flickityViewport = document.querySelector('.flickity-viewport');
+        const flickityViewport = document.querySelector('.flickity-viewport')
         if (flickityViewport) {
-            flickityViewport.style.width = '100%';
+            flickityViewport.style.width = '100%'
         }
     },
-};
+}
 </script>
 
 <style lang="scss" scoped>

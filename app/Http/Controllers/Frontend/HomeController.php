@@ -46,14 +46,23 @@ class HomeController extends Controller
                 ->get()
                 ->map(fn($product) => $product->transform());
 
-            // Fetch Featured Posts
-            $featured_posts = Post::query()
+            // Fetch Course Categories
+            $featured_posts = PostCategory::query()
                 ->active()
-                ->wherePosts()
-                ->latest('id')
-                ->take(3)
+                ->where('type', PostCategory::TYPE_POST)
+                ->with(['posts' => function ($query) {
+                    $query->active()->where('type', Post::TYPE_POST);
+                }])
+                ->orderByPosition()
+                ->orderByDesc('id')
+                ->take(4)
                 ->get()
-                ->map(fn($post) => $post->transform());
+                ->filter(fn($category) => $category->posts->isNotEmpty())
+                ->map(fn($category) => [
+                    'id' => $category->id,
+                    'title' => $category->title,
+                    'courses' => $category->posts->map(fn($post) => $post->transform()),
+                ]);
 
             // Fetch Feedback Posts
             $feedback = Post::query()

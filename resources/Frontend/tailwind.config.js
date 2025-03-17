@@ -428,7 +428,7 @@ module.exports = {
                     900: "#39221C"
                 },
                 red: {
-                    'fks': '#D34000'
+                    'fks': '#082680'
                 },
                 black: {
                     'fks': '#18191E'

@@ -18,35 +18,6 @@
                     class="object-cover w-full h-full pointer-events-none"
                     draggable="false"
                 />
-                <div
-                    class="lg:group-hover:opacity-100 opacity-0 duration-300 ease-in-out bg-link absolute inset-0 w-full h-full rounded-xl bg-black-fks bg-opacity-50 flex items-center justify-center"
-                >
-                    <Link :href="route('galleries.index')">
-                        <ButtonPrimary title="Xem thêm" />
-                    </Link>
-                </div>
-            </div>
-        </div>
-        <div class="box box01 left" ref="marqueeBoxBottom">
-            <div
-                v-for="(itemBottom, indexBottom) in [...imagesBottom, ...imagesBottom]"
-                :key="`first-${indexBottom}`"
-                class="item item_child group"
-                ref="items"
-            >
-                <img
-                    :src="itemBottom.image.url"
-                    :alt="itemBottom.image.alt"
-                    class="object-cover w-full h-full pointer-events-none"
-                    draggable="false"
-                />
-                <div
-                    class="lg:group-hover:opacity-100 opacity-0 duration-300 ease-in-out bg-link absolute inset-0 w-full h-full rounded-xl bg-black-fks bg-opacity-50 flex items-center justify-center"
-                >
-                    <Link :href="route('galleries.index')">
-                        <ButtonPrimary title="Xem thêm" />
-                    </Link>
-                </div>
             </div>
         </div>
     </div>
