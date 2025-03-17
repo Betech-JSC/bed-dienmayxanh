@@ -61,6 +61,8 @@ class HomeController extends Controller
                 ->map(fn($category) => [
                     'id' => $category->id,
                     'title' => $category->title,
+                    'slug' => $category->seo_slug ?? $category->slug,
+                    'image' => $category->getImageDetail(),
                     'courses' => $category->posts->map(fn($post) => $post->transform()),
                 ]);
 

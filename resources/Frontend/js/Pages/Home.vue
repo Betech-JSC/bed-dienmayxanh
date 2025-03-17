@@ -197,7 +197,6 @@ export default {
             ],
 
             selectedFeedback: this.feedback[0] ?? null,
-            selectedResource: this.resources[0] ?? null,
         }
     },
     computed: {
@@ -215,10 +214,6 @@ export default {
         },
         selectFeedback(feedback) {
             this.selectedFeedback = feedback
-        },
-
-        selectResource(resource) {
-            this.selectedResource = resource
         },
 
         closePopup() {
