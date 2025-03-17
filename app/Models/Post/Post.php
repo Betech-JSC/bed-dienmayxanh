@@ -214,13 +214,6 @@ class Post extends BaseModel
                     ]);
                 }
             }
-            if (Route::has($default_locale . ".courses.show")) {
-                foreach ($this->translations as $translation) {
-                    $urls[strtoupper($translation->locale)] = route("$translation->locale.posts.show", [
-                        'slug' => $translation->seo_slug ?? $translation->slug,
-                    ]);
-                }
-            }
         }
 
         return $urls;
