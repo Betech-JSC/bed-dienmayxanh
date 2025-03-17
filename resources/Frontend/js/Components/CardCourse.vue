@@ -62,7 +62,7 @@
                 <Link :href="route('courses.show', { slug: course.slug ?? '' })" class="block">
                     <div
                         class="duration-300 transition transform-gpu cursor-pointer w-full px-[18px] py-[10px] bg-white border border-gray-300 rounded-xl button-1 font-display font-bold text-gray-700 uppercase block text-center lg:group-hover:bg-green-fks lg:group-hover:border-green-fks"
-                        aria-label="Chi tiết"
+                        aria-label="Liên hệ"
                         tabindex="-1"
                     >
                         <div class="overflow-hidden w-full h-full">
@@ -72,12 +72,12 @@
                                 <div
                                     class="flex items-center justify-center h-full duration-500 opacity-100 transition-opacity group-hover:opacity-0 group-focus-visible:opacity-0 text-gray-700"
                                 >
-                                    Chi tiết
+                                    Liên hệ
                                 </div>
                                 <div
                                     class="flex items-center justify-center absolute top-0 left-0 w-full h-full translate-y-full duration-500 opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100 text-gray-700"
                                 >
-                                    Chi tiết
+                                    Liên hệ
                                 </div>
                             </div>
                         </div>
