@@ -3,24 +3,21 @@
         <div
             class="rounded-3xl p-3 border border-gray-300 bg-white lg:group-hover:-translate-y-5 duration-300 ease-in-out block lg:group-hover:bg-blue-fks"
         >
-            <Link
-                :href="route('courses.show', { slug: course.slug ?? '' })"
-                class="block w-full overflow-hidden rounded-3xl aspect-w-1 aspect-h-1"
-            >
+            <a href="tel:0775600351" class="block w-full overflow-hidden rounded-3xl aspect-w-1 aspect-h-1">
                 <JPicture
                     :src="course.image?.url || '/assets/images/cover.jpg'"
                     :alt="course.alt || course.title"
                     class="picture-cover w-full h-full group-hover:scale-[1.05] duration-300 object-fit object-cover"
                 />
-            </Link>
+            </a>
             <div class="pt-6 space-y-4">
-                <Link :href="route('courses.show', { slug: course.slug ?? '' })" class="block">
+                <a href="tel:0775600351" class="block">
                     <h4
                         class="title-1 font-display font-bold text-blue-fks lg:group-hover:text-white duration-300 ease-in-out"
                     >
                         {{ course.title }}
                     </h4>
-                </Link>
+                </a>
                 <div
                     v-show="!isHome"
                     class="body-1 font-normal font-beau lg:flex justify-start lg:space-y-0 space-y-2 lg:space-x-10 xl:space-x-14 lg:group-hover:text-white duration-300 ease-in-out"
@@ -59,7 +56,7 @@
                         </div>
                     </div>
                 </div>
-                <Link :href="route('courses.show', { slug: course.slug ?? '' })" class="block">
+                <a href="tel:0775600351" class="block">
                     <div
                         class="duration-300 transition transform-gpu cursor-pointer w-full px-[18px] py-[10px] bg-white border border-gray-300 rounded-xl button-1 font-display font-bold text-gray-700 uppercase block text-center lg:group-hover:bg-green-fks lg:group-hover:border-green-fks"
                         aria-label="Liên hệ"
@@ -82,7 +79,7 @@
                             </div>
                         </div>
                     </div>
-                </Link>
+                </a>
             </div>
         </div>
     </div>
