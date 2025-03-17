@@ -18,41 +18,10 @@
             </div>
         </div>
         <section class="md:py-[80px] py-[48px]">
-            <div v-if="course_categories && course_categories.length" class="space-y-20">
-                <div v-for="(item, index) in course_categories" :key="index">
-                    <div class="container space-y-8">
-                        <h2 class="display-3 text-[#18191E] font-bold font-display uppercase">
-                            {{ item.title }}
-                        </h2>
-                        <div v-if="item.courses && item.courses.length > 0">
-                            <div class="relative hidden md:grid grid-cols-2 lg:grid-cols-3 md:gap-6 xl:gap-8">
-                                <CardCourse
-                                    v-for="(course, index) in item.courses"
-                                    :key="index"
-                                    :course="course"
-                                    :isHome="true"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pl-4 md:hidden">
-                        <JamSlider
-                            :config="{
-                                draggable: true,
-                                prevNextButtons: false,
-                                autoPlay: false,
-                            }"
-                            class="relative"
-                        >
-                            <CardCourse
-                                class="w-[320px] mr-4"
-                                v-for="(course, index) in item.courses"
-                                :key="index"
-                                :course="course"
-                                :isHome="true"
-                            />
-                        </JamSlider>
-                    </div>
+            <div v-if="services && services.length" class="space-y-20">
+                <div class="container md:grid grid-cols-2 lg:grid-cols-3 md:gap-6 xl:gap-8">
+                    <p class="col-span-full display-2 font-bold font-display text-[#18191E] text-center">Dịch vụ</p>
+                    <CardCourse v-for="(course, index) in services" :key="index" :course="course" :isHome="true" />
                 </div>
             </div>
         </section>
@@ -150,7 +119,7 @@
 </template>
 <script>
 export default {
-    props: ['course_categories', 'sliders', 'products', 'featured_posts', 'feedback'],
+    props: ['services', 'sliders', 'products', 'featured_posts', 'feedback'],
     data() {
         return {
             about: [

@@ -21,15 +21,6 @@
         <span>{{ tt('models.table_list.post-categories') }}</span>
     </Link>
     <Link
-        v-if="can('admin.course-categories.index')"
-        :href="route('admin.course-categories.index')"
-        :class="{ active: isUrl('admin.course-categories.*') }"
-        class="item"
-    >
-        <bx:category />
-        <span>{{ tt('models.table_list.course-categories') }}</span>
-    </Link>
-    <Link
         v-if="can('admin.services.index')"
         :href="route('admin.services.index')"
         :class="{ active: isUrl('admin.services.*') }"
@@ -48,24 +39,6 @@
         <span>{{ tt('models.table_list.feedback') }}</span>
     </Link>
     <Link
-        v-if="can('admin.learning-environments.index')"
-        :href="route('admin.learning-environments.index')"
-        :class="{ active: isUrl('admin.learning-environments.*') }"
-        class="item"
-    >
-        <material-symbols:connect-without-contact />
-        <span> Hình ảnh Môi trường học </span>
-    </Link>
-    <Link
-        v-if="can('admin.prizes.index')"
-        :href="route('admin.prizes.index')"
-        :class="{ active: isUrl('admin.prizes.*') }"
-        class="item"
-    >
-        <material-symbols:connect-without-contact />
-        <span> Giải thưởng </span>
-    </Link>
-    <Link
         v-if="can('admin.products.index')"
         :href="route('admin.products.index')"
         :class="{ active: isUrl('admin.products.*') }"
@@ -73,24 +46,6 @@
     >
         <material-symbols:connect-without-contact />
         <span>{{ tt('models.table_list.products') }}</span>
-    </Link>
-    <Link
-        v-if="can('admin.faqs.index')"
-        :href="route('admin.faqs.index')"
-        :class="{ active: isUrl('admin.faqs.*') }"
-        class="item"
-    >
-        <material-symbols:connect-without-contact />
-        <span>{{ tt('models.table_list.faqs') }}</span>
-    </Link>
-    <Link
-        v-if="can('admin.courses.index')"
-        :href="route('admin.courses.index')"
-        :class="{ active: isUrl('admin.courses.*') }"
-        class="item"
-    >
-        <material-symbols:connect-without-contact />
-        <span>{{ tt('models.table_list.courses') }}</span>
     </Link>
     <Link
         v-if="can('admin.sliders.index')"

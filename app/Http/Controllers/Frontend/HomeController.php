@@ -9,6 +9,7 @@ use Illuminate\Routing\Controller;
 use App\Models\Post\Post;
 use App\Models\Post\PostCategory;
 use App\Models\Product\Product;
+use App\Models\Service;
 use JamstackVietnam\Slider\Models\Slider;
 
 class HomeController extends Controller
@@ -19,25 +20,11 @@ class HomeController extends Controller
             // Get Home Slider
             $sliders = Slider::getByPosition('HOME_SLIDER');
 
-            // Fetch Course Categories
-            $course_categories = PostCategory::query()
+            $services = Service::query()
                 ->active()
-                ->where('type', PostCategory::TYPE_COURSE)
-                ->with(['posts' => function ($query) {
-                    $query->active()->where('type', Post::TYPE_COURSE);
-                }])
-                ->orderByPosition()
-                ->orderByDesc('id')
-                ->take(4)
+                ->sortByPosition()
                 ->get()
-                ->filter(fn($category) => $category->posts->isNotEmpty())
-                ->map(fn($category) => [
-                    'id' => $category->id,
-                    'title' => $category->title,
-                    'slug' => $category->seo_slug ?? $category->slug,
-                    'image' => $category->getImageDetail(),
-                    'courses' => $category->posts->map(fn($post) => $post->transform()),
-                ]);
+                ->map(fn($item) => $item->transform());
 
             // Fetch Featured Products
             $products = Product::query()
@@ -84,7 +71,7 @@ class HomeController extends Controller
             // Prepare Response Data
             $data = [
                 'sliders' => $sliders,
-                'course_categories' => $course_categories,
+                'services' => $services,
                 'products' => $products,
                 'featured_posts' => $featured_posts,
                 'feedback' => $feedback,

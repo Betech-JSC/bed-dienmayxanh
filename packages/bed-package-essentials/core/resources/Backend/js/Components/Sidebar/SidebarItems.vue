@@ -1,9 +1,5 @@
 <template>
-    <div class="flex items-center flex-shrink-0 p-5 border-b border-gray-800">
-        <Link href="/" class="flex items-center w-full p-2 space-x-2">
-            <img src="/assets/svg/logo-footer.svg" class="max-w-[9rem]" />
-        </Link>
-    </div>
+    <div class="flex items-center flex-shrink-0 p-5 border-b border-gray-800"></div>
     <nav class="flex-1 px-2 pb-4 space-y-1 navs">
         <ul
             class="flex px-4 py-5 space-x-2 !uppercase overflow-y-auto btn-group"
