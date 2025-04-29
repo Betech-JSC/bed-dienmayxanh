@@ -50,15 +50,6 @@
             <span>{{ tt('models.table_list.roles') }}</span>
         </Link>
         <Link
-            v-if="can('admin.translations.index') && !!route().t.routes['admin.translations.index']"
-            :href="route('admin.translations.index')"
-            :class="{ active: isUrl('admin.translations.*') }"
-            class="item"
-        >
-            <ph-translate />
-            <span>{{ tt('models.table_list.translations') }}</span>
-        </Link>
-        <Link
             v-if="can('admin.settings.index')"
             :href="route('admin.settings.form', { id: 'general' })"
             :class="{ active: isUrl('admin.settings.*') }"
