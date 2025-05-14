@@ -4,7 +4,7 @@
             <!-- Logo + Navigation -->
             <div class="flex items-center space-x-6">
                 <Link to="/" class="btnlogo">
-                    <img src="https://cdn.tgdd.vn/mwgcart/tan-tam/images/logo.png" alt="Logo" width="122" height="55" />
+                    <img src="/assets/images/logo-white.png" alt="Logo" width="122" height="55" />
                 </Link>
                 <router-link to="/gioi-thieu" class="text-white hover:text-blue-500 transition font-medium">
                     Giới thiệu
