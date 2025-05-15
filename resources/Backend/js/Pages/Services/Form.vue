@@ -23,9 +23,9 @@
                     <Field
                         v-model="form.content"
                         :field="{
-                            type: 'text',
+                            type: 'richtext',
                             name: 'content',
-                            label: 'Link',
+                            label: 'content',
                         }"
                     />
                 </div>
