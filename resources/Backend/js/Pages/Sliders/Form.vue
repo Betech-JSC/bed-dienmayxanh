@@ -29,31 +29,6 @@
                             label: 'Hình desktop',
                         }"
                     />
-                    <!-- <Field
-                        v-model="form.image_mobile"
-                        :field="{
-                            type: 'file_upload',
-                            name: 'image_mobile',
-                            label: 'Hình mobile',
-                        }"
-                    /> -->
-                    <Field
-                        v-model="form.is_video"
-                        :field="{
-                            type: 'checkbox',
-                            name: 'is_video',
-                            label: 'Video',
-                        }"
-                    />
-                    <Field
-                        v-if="form.is_video"
-                        v-model="form.link"
-                        :field="{
-                            type: 'text',
-                            name: 'link',
-                            label: 'Link',
-                        }"
-                    />
                 </div>
             </div>
         </template>
@@ -67,15 +42,6 @@
                             name: 'status',
                             label: 'Trạng thái',
                             options: schema.columns.status.list,
-                        }"
-                    />
-                    <Field
-                        v-model="form.position_display"
-                        :field="{
-                            type: 'radio_list',
-                            name: 'position_display',
-                            label: 'Vị trí hiển thị',
-                            options: position_display,
                         }"
                     />
                 </div>
