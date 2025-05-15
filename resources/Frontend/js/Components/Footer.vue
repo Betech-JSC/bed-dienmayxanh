@@ -5,11 +5,7 @@
                 <div class="flex flex-col">
                     <div class="mb-4 md:mb-0">
                         <a href="/">
-                            <img
-                                src="https://cdn.tgdd.vn/mwgcart/tan-tam/images/thodmxfooter.png"
-                                alt="logo Tho Dien May XANH"
-                                class="w-64 h-auto"
-                            />
+                            <img src="/assets/images/logo.png" alt="logo Tho Dien May XANH" class="w-64 h-auto" />
                         </a>
                     </div>
                     <div class="text-center md:text-left">
@@ -35,7 +31,7 @@
                 <div>
                     <h3 class="text-lg font-semibold">Liên Hệ</h3>
                     <p class="mt-2">
-                        Tổng đài: <a href="tel:1900232463" class="text-blue-500">1900 232 463</a> (8:00 - 21:00, Thứ 2 -
+                        Tổng đài: <a href="tel:0977333965" class="text-blue-500">0977333965</a> (8:00 - 21:00, Thứ 2 -
                         CN)
                     </p>
                     <ul class="mt-2 space-y-1">

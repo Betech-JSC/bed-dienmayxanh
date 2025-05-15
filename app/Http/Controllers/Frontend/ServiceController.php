@@ -8,22 +8,32 @@ use App\Models\Service;
 
 class ServiceController extends Controller
 {
-    public function index()
+
+    public function index() {}
+
+    public function show($slug)
     {
-        $services = Service::query()
-            ->active()
-            ->sortByPosition()
-            ->get()
-            ->map(fn($item) => $item->transform());
+        try {
+            $post = Service::query()
+                ->active()
+                ->whereSlug($slug)
+                ->firstOrFail();
 
-        $data = [
-            'services' => $services,
-        ];
+            $data = [
+                'post' => $post->transformDetails(),
+                'seo' => $post->transformSeo()
+            ];
 
-        if (request()->wantsJson()) {
-            return response()->json($data);
+            if (request()->wantsJson()) {
+                return response()->json($data);
+            }
+
+            return Inertia::render('Posts/Show', $data)
+                ->withViewData([
+                    'seo' => $data['seo'],
+                ]);
+        } catch (\Throwable $th) {
+            dd($th);
         }
-
-        return Inertia::render('Services/Index', $data);
     }
 }

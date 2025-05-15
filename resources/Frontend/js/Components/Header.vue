@@ -14,8 +14,8 @@
             <!-- Contact -->
             <div class="flex items-center space-x-2">
                 <i class="icV2-tel relative text-blue-500"></i>
-                <a href="tel:1900232463" class="text-white hover:text-blue-500">
-                    <strong>1900 232 463</strong>
+                <a href="tel:0977333965" class="text-white hover:text-blue-500">
+                    <strong>0977333965</strong>
                     <span class="block text-xs">(8h00 - 21h00)</span>
                 </a>
             </div>

@@ -9,7 +9,7 @@
                         <div
                             class="w-fit px-[10px] rounded-full bg-[#2F49D9] title-3 font-bold text-white font-display mx-auto"
                         >
-                            {{ post.category.title }}
+                            {{ post.category?.title }}
                         </div>
                         <h1 class="display-3 font-bold font-display text-black-fks">
                             {{ post.title }}
@@ -20,8 +20,8 @@
                         <div class="rounded-3xl overflow-hidden">
                             <div class="aspect-w-2 aspect-h-1">
                                 <img
-                                    :src="post.image.url || '/assets/images/cover.webp'"
-                                    :alt="post.image.alt || post.title"
+                                    :src="post.image?.url || '/assets/images/cover.webp'"
+                                    :alt="post.image?.alt || post.title"
                                     class="object-cover w-full h-full"
                                 />
                             </div>
@@ -71,9 +71,9 @@ export default {
         if (this.post.type === 'POST') {
             breadcrumbs.push(
                 {
-                    name: this.post.category.title,
+                    name: this.post.category?.title,
                     url: this.route('posts.categories', {
-                        categorySlug: this.post.category.slug,
+                        categorySlug: this.post.category?.slug,
                     }),
                 },
                 { name: this.post.title }
