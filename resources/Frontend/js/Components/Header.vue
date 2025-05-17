@@ -6,9 +6,11 @@
                 <Link to="/" class="btnlogo">
                     <img src="/assets/images/logo-white.png" alt="Logo" width="122" height="55" />
                 </Link>
-                <router-link to="/gioi-thieu" class="text-white hover:text-blue-500 transition font-medium">
-                    Giới thiệu
-                </router-link>
+                <Link to="/gioi-thieu" class="text-white hover:text-blue-500 transition font-medium"> Giới thiệu </Link>
+                <Link :href="route('posts')" class="text-white hover:text-blue-500 transition font-medium">
+                    Tin tức
+                </Link>
+                <Link :href="route('posts')" class="flex items-center space-x-[8px] px-[1rem]"> Dịch vụ </Link>
             </div>
 
             <!-- Contact -->
