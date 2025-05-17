@@ -134,6 +134,7 @@ class Service extends BaseModel
             'slug' => $this->seo_slug ?? $this->slug,
             'description' => $this->description,
             'content' => $this->content,
+            'image' => $this->getImageDetail($this->image),
         ];
     }
 
