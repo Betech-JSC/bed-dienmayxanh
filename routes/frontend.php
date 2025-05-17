@@ -19,8 +19,6 @@ use Inertia\Inertia;
 
 Route::get('sitemap.xml', [SitemapController::class, 'index']);
 
-Route::get(Lang::uri('search-v2'), [HomeController::class, 'searchV2'])->name('api.search');
-
 Route::middleware(['meta_seo'])->group(function () {
     Route::localized(function () {
         Route::get(Lang::uri('/'), [HomeController::class, 'index'])->name('home');

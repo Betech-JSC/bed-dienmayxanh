@@ -56,6 +56,15 @@
         <bi:sliders2 />
         <span>{{ tt('models.table_list.sliders') }}</span>
     </Link>
+    <Link
+        v-if="can('admin.policies.index')"
+        :href="route('admin.policies.index')"
+        :class="{ active: isUrl('admin.policies.*') }"
+        class="item"
+    >
+        <material-symbols:policy-outline-sharp />
+        <span>{{ tt('models.table_list.policies') }}</span>
+    </Link>
 </template>
 
 <script>
