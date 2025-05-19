@@ -66,6 +66,7 @@ export default {
                 type: 'FEEDBACK',
                 status: this.item.status ?? 'ACTIVE',
                 view_count: this.item.view_count ?? 0,
+                price: this.item.price ?? 0,
             },
         }
     },
@@ -76,6 +77,7 @@ export default {
                 type: 'FEEDBACK',
                 status: this.item.status ?? 'ACTIVE',
                 view_count: this.item.view_count ?? 0,
+                price: this.item.price ?? 0,
             }
         },
     },
