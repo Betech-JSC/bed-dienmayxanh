@@ -9,7 +9,30 @@ use App\Models\Service;
 class ServiceController extends Controller
 {
 
-    public function index() {}
+    public function index()
+    {
+        try {
+            $post = Service::query()
+                ->active()
+                ->get();
+
+            $data = [
+                'post' => $post->transformDetails(),
+                'seo' => $post->transformSeo()
+            ];
+
+            if (request()->wantsJson()) {
+                return response()->json($data);
+            }
+
+            return Inertia::render('Posts/Show', $data)
+                ->withViewData([
+                    'seo' => $data['seo'],
+                ]);
+        } catch (\Throwable $th) {
+            dd($th);
+        }
+    }
 
     public function show($slug)
     {
