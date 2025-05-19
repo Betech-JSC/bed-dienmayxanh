@@ -49,7 +49,7 @@
             </div>
             <div class="mt-8 text-center text-sm border-t pt-4">
                 <p>
-                    © 2021. Website thương mại điện tử kythuatlanh.com. Công ty Cổ phần Dịch Vụ Lắp đặt - Sửa chữa - Bảo
+                    © 2025. Website thương mại điện tử kythuatlanh.com. Công ty Cổ phần Dịch Vụ Lắp đặt - Sửa chữa - Bảo
                     hành Tận Tâm.
                 </p>
             </div>

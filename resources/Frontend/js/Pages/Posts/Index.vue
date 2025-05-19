@@ -18,37 +18,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-span-3">
-                            <div
-                                class="flex justify-between items-center py-[10px] px-[1rem] bg-white border border-gray-300 rounded-[8px]"
-                            >
-                                <input
-                                    ref="inputSearch"
-                                    v-model="searchText"
-                                    @keyup.enter="handleSearch"
-                                    type="text"
-                                    class="outline-none ring-0"
-                                    placeholder="Tìm kiếm"
-                                />
-                                <div>
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 20 20"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
-                                            stroke="#44403C"
-                                            stroke-width="1.66667"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="col-span-3"></div>
                     </div>
                 </div>
             </div>
