@@ -12,9 +12,9 @@
                     <div class="absolute lg:top-[160px] top-[100px] space-y-3 w-full grid grid-cols-12">
                         <div class="col-span-9">
                             <div>
-                                <h1 class="display-2 text-[#18191E] font-bold font-display">Funky Blog</h1>
+                                <h1 class="display-2 text-[#18191E] font-bold font-display">Blog</h1>
                                 <p class="body-1 font-beau font-normal text-[#18191E]">
-                                    Nơi chia sẻ các tin tức, thông tin mới nhất từ Funky
+                                    Nơi chia sẻ các tin tức, thông tin mới nhất
                                 </p>
                             </div>
                         </div>
