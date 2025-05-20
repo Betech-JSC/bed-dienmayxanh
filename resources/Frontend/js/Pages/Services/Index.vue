@@ -24,6 +24,7 @@
                 </div>
             </div>
         </Banner>
+
         <section v-if="services && services.length" class="md:py-[80px] py-[48px] bg-gray-warm-100 relative z-0">
             <div class="container space-y-20">
                 <div class="space-y-8">
@@ -50,9 +51,9 @@
                                     {{ item.description }}
                                 </p>
 
-                                <a :href="item.link" target="_blank">
-                                    <ButtonService title="Liên hệ ngay" class="w-[117px]" />
-                                </a>
+                                <Link :href="route('services.show', { slug: item.slug })">
+                                    <ButtonService title="Xem thêm" class="w-[117px]" />
+                                </Link>
                             </div>
                         </div>
                     </div>

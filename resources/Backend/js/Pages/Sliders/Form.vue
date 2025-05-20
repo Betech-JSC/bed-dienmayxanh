@@ -44,6 +44,15 @@
                             options: schema.columns.status.list,
                         }"
                     />
+                    <Field
+                        v-model="form.position_display"
+                        :field="{
+                            type: 'radio_list',
+                            name: 'position_display',
+                            label: 'Vị trí hiển thị',
+                            options: position_display,
+                        }"
+                    />
                 </div>
             </div>
         </template>

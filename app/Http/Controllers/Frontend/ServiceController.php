@@ -12,23 +12,21 @@ class ServiceController extends Controller
     public function index()
     {
         try {
-            $post = Service::query()
+            $services = Service::query()
                 ->active()
-                ->get();
+                ->orderBy('id', 'desc')
+                ->get()
+                ->map(fn($item) => $item->transform());
 
             $data = [
-                'post' => $post->transformDetails(),
-                'seo' => $post->transformSeo()
+                'services' => $services
             ];
 
             if (request()->wantsJson()) {
                 return response()->json($data);
             }
 
-            return Inertia::render('Posts/Show', $data)
-                ->withViewData([
-                    'seo' => $data['seo'],
-                ]);
+            return Inertia::render('Services/Index', $data);
         } catch (\Throwable $th) {
             dd($th);
         }

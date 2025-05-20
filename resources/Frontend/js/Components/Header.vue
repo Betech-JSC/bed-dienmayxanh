@@ -9,10 +9,10 @@
                 <Link :href="route('home')" class="text-white hover:text-blue-500 transition font-medium">
                     Giới thiệu
                 </Link>
+                <Link :href="route('services.index')" class="flex items-center space-x-[8px] px-[1rem]"> Dịch vụ </Link>
                 <Link :href="route('posts')" class="text-white hover:text-blue-500 transition font-medium">
-                    Tin tức
+                    Kinh nghiệm sử dụng
                 </Link>
-                <Link :href="route('posts')" class="flex items-center space-x-[8px] px-[1rem]"> Dịch vụ </Link>
             </div>
 
             <!-- Contact -->
