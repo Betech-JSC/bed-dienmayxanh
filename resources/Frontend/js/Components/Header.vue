@@ -1,5 +1,5 @@
 <template>
-    <header class="fixed top-0 left-0 w-full shadow-md bg-[#082680] text-white z-[1]">
+    <header class="fixed top-0 left-0 w-full shadow-md bg-[#082680] text-white z-[99]">
         <div class="container mx-auto flex justify-between items-center py-3 px-4">
             <!-- Logo + Navigation -->
             <div class="flex items-center space-x-6">

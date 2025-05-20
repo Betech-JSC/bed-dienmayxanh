@@ -40,6 +40,13 @@ class HomeController extends Controller
                 ->get()
                 ->map(fn($product) => $product->transform());
 
+            $members = Post::query()
+                ->where('status', Post::STATUS_ACTIVE)
+                ->where('type', Post::TYPE_MEMBER)
+                ->take(12)
+                ->get()
+                ->map(fn($product) => $product->transform());
+
             // Fetch Feedback Posts
             $feedback = Post::query()
                 ->active()
@@ -58,6 +65,7 @@ class HomeController extends Controller
             // Prepare Response Data
             $data = [
                 'sliders' => $sliders,
+                'members' => $members,
                 'services' => $services,
                 'products' => $products,
                 'posts' => $posts,

@@ -103,6 +103,17 @@
 
         <section class="container md:py-[80px] py-[48px] space-y-[32px]">
             <div class="w-full text-center">
+                <p class="display-2 font-bold font-display text-black-fks uppercase">Hình ảnh thi công</p>
+            </div>
+            <div class="grid grid-cols-4">
+                <div class="col-span-full md:col-span-1" v-for="(item, index) in members" :key="index">
+                    <div class="aspect-w-2 aspect-h-2"><JPicture :src="item.image.url" /></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container md:py-[80px] py-[48px] space-y-[32px]">
+            <div class="w-full text-center">
                 <p class="display-2 font-bold font-display text-black-fks uppercase">Kinh nghiệm sử dụng</p>
             </div>
             <div class="relative hidden md:grid grid-cols-2 lg:grid-cols-3 md:gap-6 xl:gap-8">
@@ -113,7 +124,7 @@
 </template>
 <script>
 export default {
-    props: ['services', 'sliders', 'products', 'posts', 'feedback'],
+    props: ['services', 'sliders', 'products', 'posts', 'feedback', 'members'],
     data() {
         return {
             about: [

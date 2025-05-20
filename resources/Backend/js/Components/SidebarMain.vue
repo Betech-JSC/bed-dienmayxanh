@@ -30,6 +30,15 @@
         <span>{{ tt('models.table_list.services') }}</span>
     </Link>
     <Link
+        v-if="can('admin.members.index')"
+        :href="route('admin.members.index')"
+        :class="{ active: isUrl('admin.members.*') }"
+        class="item"
+    >
+        <bx:category />
+        <span> Hình ảnh thi công </span>
+    </Link>
+    <Link
         v-if="can('admin.feedback.index')"
         :href="route('admin.feedback.index')"
         :class="{ active: isUrl('admin.feedback.*') }"
