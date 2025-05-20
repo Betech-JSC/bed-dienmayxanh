@@ -21,13 +21,13 @@
         <div class="about-page">
             <!-- Nội dung chính -->
             <div class="max-w-5xl mx-auto px-4 py-10 text-gray-800">
-                <h1 class="text-3xl md:text-4xl font-bold text-blue-800 mb-6">Giới Thiệu Điện Máy Sài Gòn Xanh</h1>
+                <h1 class="text-3xl md:text-4xl font-bold text-blue-800 mb-6">Giới Thiệu Kỹ Thuật Lạnh</h1>
 
                 <div class="space-y-5 text-base md:text-lg leading-relaxed">
                     <p>
-                        Điện Máy Sài Gòn Xanh tự hào là hệ thống siêu thị điện máy uy tín hàng đầu, cung cấp đa dạng sản
-                        phẩm như Tivi, Tủ lạnh, Máy giặt, Máy lạnh, Gia dụng, Thiết bị nhà bếp và nhiều hơn nữa từ các
-                        thương hiệu lớn như Samsung, Sony, LG, Toshiba, Panasonic, Sharp...
+                        Kỹ Thuật Lạnh tự hào là hệ thống siêu thị điện máy uy tín hàng đầu, cung cấp đa dạng sản phẩm
+                        như Tivi, Tủ lạnh, Máy giặt, Máy lạnh, Gia dụng, Thiết bị nhà bếp và nhiều hơn nữa từ các thương
+                        hiệu lớn như Samsung, Sony, LG, Toshiba, Panasonic, Sharp...
                     </p>
 
                     <p>
@@ -38,8 +38,8 @@
 
                     <p>
                         Đội ngũ nhân viên nhiệt tình, chuyên nghiệp cùng hệ thống giao hàng toàn quốc giúp khách hàng
-                        hoàn toàn yên tâm khi lựa chọn Điện Máy Sài Gòn Xanh là nơi mua sắm thiết bị điện tử, điện lạnh
-                        và gia dụng.
+                        hoàn toàn yên tâm khi lựa chọn Kỹ Thuật Lạnh là nơi mua sắm thiết bị điện tử, điện lạnh và gia
+                        dụng.
                     </p>
 
                     <!-- Tầm nhìn & Sứ mệnh -->
