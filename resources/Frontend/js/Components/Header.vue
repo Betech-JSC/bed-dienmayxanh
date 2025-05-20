@@ -6,7 +6,7 @@
                 <Link :href="route('home')" class="btnlogo">
                     <img src="/assets/images/logo-white.png" alt="Logo" width="122" height="55" />
                 </Link>
-                <Link :href="route('home')" class="text-white hover:text-blue-500 transition font-medium">
+                <Link :href="route('histories.index')" class="text-white hover:text-blue-500 transition font-medium">
                     Giới thiệu
                 </Link>
                 <Link :href="route('services.index')" class="flex items-center space-x-[8px] px-[1rem]"> Dịch vụ </Link>
