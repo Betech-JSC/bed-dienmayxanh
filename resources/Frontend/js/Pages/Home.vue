@@ -101,7 +101,7 @@
             </div>
         </section>
 
-        <section class="container md:py-[80px] py-[48px]">
+        <section class="container md:py-[80px] py-[48px] space-y-[32px]">
             <div class="w-full text-center">
                 <p class="display-2 font-bold font-display text-black-fks uppercase">Kinh nghiệm sử dụng</p>
             </div>
