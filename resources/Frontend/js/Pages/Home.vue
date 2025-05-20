@@ -101,25 +101,19 @@
             </div>
         </section>
 
-        <section class="md:py-[80px] py-[48px]">
-            <div v-if="featured_posts && featured_posts.length" class="space-y-20">
-                <div v-for="(item, index) in featured_posts" :key="index">
-                    <div class="container space-y-8">
-                        <h2 class="display-3 text-[#18191E] font-bold font-display uppercase">
-                            {{ item.title }}
-                        </h2>
-                        <div class="relative hidden md:grid grid-cols-2 lg:grid-cols-3 md:gap-6 xl:gap-8">
-                            <CardBlog v-for="(course, index) in item.courses" :key="index" :item="course" />
-                        </div>
-                    </div>
-                </div>
+        <section class="container md:py-[80px] py-[48px]">
+            <div class="w-full text-center">
+                <p class="display-2 font-bold font-display text-black-fks uppercase">Kinh nghiệm sử dụng</p>
+            </div>
+            <div class="relative hidden md:grid grid-cols-2 lg:grid-cols-3 md:gap-6 xl:gap-8">
+                <CardBlog v-for="(course, index) in posts" :key="index" :item="course" />
             </div>
         </section>
     </main>
 </template>
 <script>
 export default {
-    props: ['services', 'sliders', 'products', 'featured_posts', 'feedback'],
+    props: ['services', 'sliders', 'products', 'posts', 'feedback'],
     data() {
         return {
             about: [
