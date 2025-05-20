@@ -19,15 +19,6 @@
         </Banner>
 
         <div class="about-page">
-            <!-- Banner -->
-            <div class="w-full">
-                <img
-                    src="https://dienmaysaigonxanh.com/uploads/images/banners/banner_gioithieu.jpg"
-                    alt="Giới thiệu"
-                    class="w-full h-auto object-cover"
-                />
-            </div>
-
             <!-- Nội dung chính -->
             <div class="max-w-5xl mx-auto px-4 py-10 text-gray-800">
                 <h1 class="text-3xl md:text-4xl font-bold text-blue-800 mb-6">Giới Thiệu Điện Máy Sài Gòn Xanh</h1>
