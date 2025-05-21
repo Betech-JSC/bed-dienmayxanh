@@ -462,6 +462,10 @@ class Post extends BaseModel
             ->values()
             ->map(fn($item) => $item->transform());
 
+        $images = collect($this->images)->map(function ($image) {
+            return $this->getImageDetail($image);
+        })->toArray();
+
         $data = [
             'id' => $this->id,
             'title' => $this->title,
@@ -480,6 +484,8 @@ class Post extends BaseModel
             'banner_mobile' => $this->getImageDetail($this->banner_mobile),
             'url' => $this->current_url,
             'link' => $this->link,
+            'images' => $images,
+
             'icon' => $this->icon,
             'resource_type' => $this->resource_type,
             'price' => $this->price,

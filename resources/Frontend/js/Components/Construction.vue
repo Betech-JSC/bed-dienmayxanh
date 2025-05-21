@@ -4,16 +4,20 @@
             <p class="display-2 font-bold font-display text-black-fks uppercase">Hình ảnh thi công</p>
         </div>
         <div class="grid grid-cols-4 gap-[12px]">
-            <div
+            <Link
+                :href="
+                    route('members.show', {
+                        slugMember: item.slug ?? '',
+                    })
+                "
                 class="col-span-full md:col-span-1 cursor-pointer"
                 v-for="(item, index) in members"
                 :key="index"
-                @click="openSlider(item.images)"
             >
                 <div class="aspect-w-2 aspect-h-2">
                     <JPicture :src="item.image.url" />
                 </div>
-            </div>
+            </Link>
         </div>
 
         <!-- Overlay Slider -->
@@ -61,7 +65,7 @@ export default {
 
 <style scoped>
 .swiper {
-    --swiper-navigation-color: white;
-    --swiper-pagination-color: white;
+    --swiper-navigation-color: black;
+    --swiper-pagination-color: black;
 }
 </style>

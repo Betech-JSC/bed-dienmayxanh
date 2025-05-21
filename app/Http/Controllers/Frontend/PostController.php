@@ -79,6 +79,32 @@ class PostController extends Controller
         }
     }
 
+    public function showMember($slugMember)
+    {
+        try {
+            $post = $this->model::query()
+                ->active()
+                ->whereSlug($slugMember)
+                ->firstOrFail();
+
+            $data = [
+                'post' => $post->transformDetails(),
+                'seo' => $post->transformSeo()
+            ];
+
+            if (request()->wantsJson()) {
+                return response()->json($data);
+            }
+
+            return Inertia::render('Posts/Construction', $data)
+                ->withViewData([
+                    'seo' => $data['seo'],
+                ]);
+        } catch (\Throwable $th) {
+            dd($th);
+        }
+    }
+
     public function relatedPosts($postId)
     {
         $post = Post::query()

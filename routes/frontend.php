@@ -39,6 +39,8 @@ Route::middleware(['meta_seo'])->group(function () {
         Route::controller(PostController::class)->group(function () {
             Route::get(Lang::uri('posts'), 'index')->name('posts');
             Route::get(Lang::uri('posts') . '/{slug}', 'show')->name('posts.show');
+
+            Route::get('/nhat-ky-thi-cong' . '/{slugMember}', 'showMember')->name('members.show');
         });
 
         Route::controller(ProductController::class)->group(function () {
