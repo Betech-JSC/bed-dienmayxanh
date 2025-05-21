@@ -59,7 +59,10 @@
                             >kythuatlanh.com</a
                         >
                     </p>
-                    <p><span class="font-medium">Địa chỉ:</span> 123 Đường ABC, Quận X, TP.HCM</p>
+                    <p>
+                        <span class="font-medium">Địa chỉ:</span> 142 Mai Hắc Đế, P. Tân Thành, Tp. Buôn Ma Thuột, Tỉnh
+                        Đắk Lắk
+                    </p>
                 </div>
             </div>
         </div>
