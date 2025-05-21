@@ -84,7 +84,7 @@ export default {
     },
     watch: {
         item() {
-            ;(this.formData = this.item), 
+            this.formData = this.item
         },
     },
 }
