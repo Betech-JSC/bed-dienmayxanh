@@ -58,6 +58,14 @@
                             multiple: false,
                         }"
                     />
+                    <Field
+                        v-model="form.images"
+                        :field="{
+                            type: 'file_upload',
+                            name: 'images',
+                            multiple: true,
+                        }"
+                    />
                 </div>
             </div>
         </template>

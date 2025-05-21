@@ -68,6 +68,7 @@ class Post extends BaseModel
         'footer_position',
         'view_count',
         'image',
+        'images',
         'banner',
         'banner_mobile',
         'show_table_of_contents',
@@ -116,6 +117,7 @@ class Post extends BaseModel
 
     protected $casts = [
         'image' => 'array',
+        'images' => 'array',
         'icon' => 'array',
         'banner' => 'array',
         'banner_mobile' => 'array',
