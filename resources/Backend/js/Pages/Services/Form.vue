@@ -59,6 +59,14 @@
                             multiple: false,
                         }"
                     />
+                    <Field
+                        v-model="form.sliders"
+                        :field="{
+                            type: 'file_upload',
+                            name: 'sliders',
+                            multiple: true,
+                        }"
+                    />
                 </div>
             </div>
         </template>
@@ -76,7 +84,7 @@ export default {
     },
     watch: {
         item() {
-            this.formData = this.item
+            ;(this.formData = this.item), 
         },
     },
 }
