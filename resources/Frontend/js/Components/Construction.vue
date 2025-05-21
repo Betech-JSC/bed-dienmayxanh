@@ -14,7 +14,7 @@
                 v-for="(item, index) in members"
                 :key="index"
             >
-                <div class="aspect-w-2 aspect-h-1 max-h-[252px]">
+                <div class="aspect-w-2 aspect-h-1 max-h-[252px] min-h-[252px]">
                     <JPicture :src="item.image.url" class="w-full h-full" />
                 </div>
             </Link>
