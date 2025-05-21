@@ -337,6 +337,7 @@ class Post extends BaseModel
             'description' => $this->description,
             'category' => $this->category,
             'categories' => $categories,
+            'images' => $images,
             'image' => $this->getImageDetail($this->image),
             'icon' => $this->getImageDetail($this->icon),
             'url' => $this->current_url,

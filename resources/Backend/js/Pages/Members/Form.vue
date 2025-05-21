@@ -82,6 +82,7 @@ export default {
                 status: this.item.status ?? 'ACTIVE',
                 view_count: this.item.view_count ?? 0,
                 price: this.item.price ?? 0,
+                images: this.item.images ?? [],
             },
         }
     },
@@ -92,6 +93,7 @@ export default {
                 type: 'MEMBER',
                 view_count: this.item.view_count ?? 0,
                 price: this.item.price ?? 0,
+                images: this.item.images ?? [],
             }
         },
     },
