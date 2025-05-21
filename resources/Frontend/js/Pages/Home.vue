@@ -101,16 +101,7 @@
             </div>
         </section>
 
-        <section class="container md:py-[80px] py-[48px] space-y-[32px]">
-            <div class="w-full text-center">
-                <p class="display-2 font-bold font-display text-black-fks uppercase">Hình ảnh thi công</p>
-            </div>
-            <div class="grid grid-cols-4">
-                <div class="col-span-full md:col-span-1" v-for="(item, index) in members" :key="index">
-                    <div class="aspect-w-2 aspect-h-2"><JPicture :src="item.image.url" /></div>
-                </div>
-            </div>
-        </section>
+        <Construction :members="members" />
 
         <section class="container md:py-[80px] py-[48px] space-y-[32px]">
             <div class="w-full text-center">

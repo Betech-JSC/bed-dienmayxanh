@@ -329,6 +329,10 @@ class Post extends BaseModel
             ->values()
             ->map(fn($item) => $item->transform());
 
+        $images = collect($this->images)->map(function ($image) {
+            return $this->getImageDetail($image);
+        })->toArray();
+
         $data = [
             'id' => $this->id,
             'title' => $this->title,
@@ -337,7 +341,7 @@ class Post extends BaseModel
             'description' => $this->description,
             'category' => $this->category,
             'categories' => $categories,
-            'images' => $this->images,
+            'images' => $images,
             'image' => $this->getImageDetail($this->image),
             'icon' => $this->getImageDetail($this->icon),
             'url' => $this->current_url,
