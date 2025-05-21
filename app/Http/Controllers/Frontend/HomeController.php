@@ -44,7 +44,8 @@ class HomeController extends Controller
             $members = Post::query()
                 ->where('status', Post::STATUS_ACTIVE)
                 ->where('type', Post::TYPE_MEMBER)
-                ->take(12)
+                ->orderByDesc('id')
+                ->take(8)
                 ->get()
                 ->map(fn($product) => $product->transform());
 
