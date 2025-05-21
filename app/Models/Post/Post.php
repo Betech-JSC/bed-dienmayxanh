@@ -28,6 +28,7 @@ class Post extends BaseModel
     public const TYPE_RESOURCE = 'RESOURCE';
     public const TYPE_MEMBER = 'MEMBER';
     public const TYPE_FAQ = 'FAQ';
+    public const TYPE_INTRODUCE = 'INTRODUCE';
 
     public const TYPE_LEARNING_ENV = 'LEARNING_ENV';
     public const TYPE_PRIZE = 'PRIZE';

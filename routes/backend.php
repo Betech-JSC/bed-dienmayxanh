@@ -24,7 +24,7 @@ use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\PolicyController;
 use App\Http\Controllers\Backend\MemberController;
 use App\Http\Controllers\Backend\FeedbackController;
-
+use App\Http\Controllers\Backend\IntroduceController;
 use App\Http\Controllers\Backend\LearningEnvironmentController;
 use App\Http\Controllers\Backend\PrizeController;
 
@@ -56,5 +56,6 @@ Route::localized(function () {
         Route::module(FaqController::class);
         Route::module(LearningEnvironmentController::class);
         Route::module(PrizeController::class);
+        Route::module(IntroduceController::class);
     });
 });

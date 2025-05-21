@@ -1,16 +1,23 @@
 <template>
     <header class="fixed top-0 left-0 w-full shadow-md bg-[#082680] text-white z-[99]">
         <div class="container mx-auto flex justify-between items-center py-3 px-4">
-            <!-- Logo + Navigation -->
             <div class="flex items-center space-x-6">
                 <Link :href="route('home')" class="btnlogo">
                     <img src="/assets/images/logo-white.png" alt="Logo" width="122" height="55" />
                 </Link>
-                <Link :href="route('histories.index')" class="text-white hover:text-blue-500 transition font-medium">
+                <Link
+                    :href="route('histories.index')"
+                    class="text-white hover:text-blue-500 transition font-medium md:block hidden"
+                >
                     Giới thiệu
                 </Link>
-                <Link :href="route('services.index')" class="flex items-center space-x-[8px] px-[1rem]"> Dịch vụ </Link>
-                <Link :href="route('posts')" class="text-white hover:text-blue-500 transition font-medium">
+                <Link :href="route('services.index')" class="flex items-center space-x-[8px] px-[1rem] md:block hidden">
+                    Dịch vụ
+                </Link>
+                <Link
+                    :href="route('posts')"
+                    class="text-white hover:text-blue-500 transition font-medium md:block hidden"
+                >
                     Kinh nghiệm sử dụng
                 </Link>
             </div>

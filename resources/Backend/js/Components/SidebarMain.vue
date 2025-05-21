@@ -30,6 +30,15 @@
         <span>{{ tt('models.table_list.services') }}</span>
     </Link>
     <Link
+        v-if="can('admin.introduces.index')"
+        :href="route('admin.introduces.index')"
+        :class="{ active: isUrl('admin.introduces.*') }"
+        class="item"
+    >
+        <bx:category />
+        <span>{{ tt('models.table_list.introduces') }}</span>
+    </Link>
+    <Link
         v-if="can('admin.members.index')"
         :href="route('admin.members.index')"
         :class="{ active: isUrl('admin.members.*') }"
