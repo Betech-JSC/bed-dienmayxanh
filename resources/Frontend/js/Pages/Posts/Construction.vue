@@ -16,7 +16,7 @@
                         </h1>
                         <div class="body-1 text-black-fks font-beau">{{ post.description }}</div>
                     </div>
-                    <div class="col-span-full grid grid-cols-4 gap-[24px]">
+                    <div class="col-span-full grid grid-cols-4 md:gap-[24px] gap-[12px]">
                         <div v-for="(item, index) in post.images" class="col-span-2 md:col-span-1">
                             <div class="aspect-w-2 aspect-h-1 min-h-[252px]">
                                 <JPicture
