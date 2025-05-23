@@ -65,6 +65,36 @@ class HandleInertiaFrontendRequests extends Middleware
             ->get()
             ->map(fn($item) => $item->transformFaqs());
 
+        $post_post = Post::query()
+            ->active()
+            ->where('type_post', Post::KINHNGHIEMSUDUNG)
+            ->get()
+            ->map(fn($item) => $item->transform());
+
+        $post_about = Post::query()
+            ->active()
+            ->where('type_post', Post::GIOITHIEU)
+            ->get()
+            ->map(fn($item) => $item->transform());
+
+        $post_service = Post::query()
+            ->active()
+            ->where('type_post', Post::DICH_VU_KHAC)
+            ->get()
+            ->map(fn($item) => $item->transform());
+
+        $post_maylanh = Post::query()
+            ->active()
+            ->where('type_post', Post::MAYLANH)
+            ->get()
+            ->map(fn($item) => $item->transform());
+
+        $post_dien_lanh_cong_nghiep = Post::query()
+            ->active()
+            ->where('type_post', Post::DIEN_LANH_CONG_NGHIEP)
+            ->get()
+            ->map(fn($item) => $item->transform());
+
         $banner_home = Slider::getByPosition('HOME_SLIDER');
         $banner_about_1 = Slider::getByPosition('BANNER_ABOUT_SECTION_1');
         $banner_about_2 = Slider::getByPosition('BANNER_ABOUT_SECTION_2');
@@ -101,7 +131,13 @@ class HandleInertiaFrontendRequests extends Middleware
                 'query' => $request->query(),
             ],
             'data' => [
-                'prizes' => $prizes,
+                'post_about' => $post_about,
+                'post_service' => $post_service,
+                'post_maylanh' => $post_maylanh,
+                'post_dien_lanh_cong_nghiep' => $post_dien_lanh_cong_nghiep,
+                'post_post' => $post_post,
+
+                'prizes' => $post_about,
                 'learning_env' => $learning_env,
                 'footer_courses' => $footerCourses,
                 'members' => $members,

@@ -51,6 +51,21 @@
                         }"
                     />
                     <Field
+                        v-model="form.type_post"
+                        :field="{
+                            type: 'radio_list',
+                            name: 'status',
+                            label: 'Trạng thái',
+                            options: [
+                                { id: 'KINHNGHIEMSUDUNG', label: 'Kinh nghiệm sử dụng' },
+                                { id: 'GIOITHIEU', label: 'Giới thiệu' },
+                                { id: 'DICH_VU_KHAC', label: 'Dịch vụ khác' },
+                                { id: 'MAYLANH', label: 'Máy lạnh' },
+                                { id: 'DIEN_LANH_CONG_NGHIEP', label: 'Điện lạnh công nghiệp' },
+                            ],
+                        }"
+                    />
+                    <Field
                         v-model="form.published_at"
                         :field="{
                             type: 'date',
@@ -141,6 +156,7 @@ export default {
             formData: {
                 ...this.item,
                 type: 'POST',
+                type_post: this.item.type_post,
                 status: this.item.status ?? 'ACTIVE',
                 view_count: this.item.view_count ?? 0,
             },
@@ -150,6 +166,7 @@ export default {
         item() {
             this.formData = {
                 type: 'POST',
+                type_post: this.item.type_post,
                 status: this.item.status ?? 'ACTIVE',
                 ...this.item,
             }

@@ -29,9 +29,14 @@ class Post extends BaseModel
     public const TYPE_MEMBER = 'MEMBER';
     public const TYPE_FAQ = 'FAQ';
     public const TYPE_INTRODUCE = 'INTRODUCE';
-
     public const TYPE_LEARNING_ENV = 'LEARNING_ENV';
     public const TYPE_PRIZE = 'PRIZE';
+
+    public const KINHNGHIEMSUDUNG = 'KINHNGHIEMSUDUNG';
+    public const GIOITHIEU = 'GIOITHIEU';
+    public const DICH_VU_KHAC = 'DICH_VU_KHAC';
+    public const MAYLANH = 'MAYLANH';
+    public const DIEN_LANH_CONG_NGHIEP = 'DIEN_LANH_CONG_NGHIEP';
 
     public const STATUS_LIST = [
         self::STATUS_ACTIVE => 'Kích hoạt',
@@ -66,6 +71,7 @@ class Post extends BaseModel
         'position',
         'download',
         'home_position',
+        'type_post',
         'footer_position',
         'view_count',
         'image',

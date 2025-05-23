@@ -21,15 +21,6 @@
         <span>{{ tt('models.table_list.post-categories') }}</span>
     </Link>
     <Link
-        v-if="can('admin.services.index')"
-        :href="route('admin.services.index')"
-        :class="{ active: isUrl('admin.services.*') }"
-        class="item"
-    >
-        <bx:category />
-        <span>{{ tt('models.table_list.services') }}</span>
-    </Link>
-    <Link
         v-if="can('admin.introduces.index')"
         :href="route('admin.introduces.index')"
         :class="{ active: isUrl('admin.introduces.*') }"

@@ -18,17 +18,17 @@ class PostController extends Controller
             $posts = Post::query()
                 ->active()
                 ->activeCategories()
-                ->wherePosts()
+                ->where('type_post', Post::KINHNGHIEMSUDUNG)
                 ->orderByPosition()
                 ->orderBy('id', 'desc')
                 ->get()
                 ->map(fn($item) => $item->transform());
 
             $most_view = Post::query()
+                ->where('type_post', Post::KINHNGHIEMSUDUNG)
                 ->active()
-                ->wherePosts()
                 ->activeCategories()
-                ->orderBy('view_count', 'desc')
+                ->activeCategories()->orderBy('view_count', 'desc')
                 ->take(3)
                 ->get()
                 ->map(fn($item) => $item->transform());
