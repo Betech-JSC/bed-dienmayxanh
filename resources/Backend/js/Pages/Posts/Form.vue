@@ -55,7 +55,7 @@
                         :field="{
                             type: 'radio_list',
                             name: 'status',
-                            label: 'Trạng thái',
+                            label: 'TYPE',
                             options: [
                                 { id: 'KINHNGHIEMSUDUNG', label: 'Kinh nghiệm sử dụng' },
                                 { id: 'GIOITHIEU', label: 'Giới thiệu' },
