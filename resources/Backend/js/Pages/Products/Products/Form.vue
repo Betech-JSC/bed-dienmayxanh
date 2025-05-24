@@ -25,6 +25,14 @@
                             label: 'Mô tả',
                         }"
                     />
+                    <Field
+                        v-model="form.content"
+                        :field="{
+                            type: 'richtext',
+                            name: 'content',
+                            label: 'Nội dung',
+                        }"
+                    />
                 </div>
             </div>
         </template>
