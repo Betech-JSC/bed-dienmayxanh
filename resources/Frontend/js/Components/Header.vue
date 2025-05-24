@@ -14,7 +14,7 @@
                 <div class="relative group pointer-events-auto">
                     <div class="cursor-pointer px-4 hover:text-blue-400">Giới thiệu</div>
                     <div
-                        class="absolute left-0 top-full mt-1 bg-white text-black shadow-lg rounded p-3 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition"
+                        class="absolute left-0 mt-[-2px] top-full bg-white text-black shadow-lg rounded p-3 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition"
                     >
                         <ul class="space-y-2 list-disc">
                             <li v-for="(item, index) in $page.props.data.post_about" :key="index">
@@ -30,7 +30,7 @@
                 <div class="relative group pointer-events-auto">
                     <div class="cursor-pointer px-4 hover:text-blue-400">Máy lạnh</div>
                     <div
-                        class="absolute left-0 top-full mt-1 bg-white text-black shadow-lg rounded p-3 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition"
+                        class="absolute left-0 mt-[-2px] top-full bg-white text-black shadow-lg rounded p-3 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition"
                     >
                         <ul class="space-y-2 list-disc">
                             <li v-for="(item, index) in $page.props.data.post_maylanh" :key="index">
@@ -46,7 +46,7 @@
                 <div class="relative group pointer-events-auto">
                     <div class="cursor-pointer px-4 hover:text-blue-400">Điện lạnh công nghiệp</div>
                     <div
-                        class="absolute left-0 top-full mt-1 bg-white text-black shadow-lg rounded p-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition"
+                        class="absolute left-0 mt-[-2px] top-full bg-white text-black shadow-lg rounded p-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition"
                     >
                         <ul class="space-y-2 list-disc">
                             <li v-for="(item, index) in $page.props.data.post_dien_lanh_cong_nghiep" :key="index">
@@ -63,7 +63,7 @@
                     <div class="cursor-pointer px-4 hover:text-blue-400">Dịch vụ khác</div>
                     <div
                         v-if="$page.props.data.post_service && $page.props.data.post_service.length"
-                        class="absolute left-0 top-full mt-1 bg-white text-black shadow-lg rounded p-3 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition"
+                        class="absolute left-0 mt-[-2px] top-full bg-white text-black shadow-lg rounded p-3 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition"
                     >
                         <ul class="space-y-2 list-disc">
                             <li v-for="(item, index) in $page.props.data.post_service" :key="index">
