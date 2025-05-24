@@ -107,7 +107,7 @@
             <div class="w-full text-center">
                 <p class="display-2 font-bold font-display text-black-fks uppercase">Kinh nghiệm sử dụng</p>
             </div>
-            <div class="relative hidden md:grid grid-cols-2 lg:grid-cols-3 md:gap-6 xl:gap-8">
+            <div class="md:grid grid-cols-2 lg:grid-cols-3 md:gap-6 xl:gap-8">
                 <CardBlog v-for="(course, index) in posts" :key="index" :item="course" />
             </div>
         </section>
