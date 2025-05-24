@@ -57,6 +57,14 @@
                             multiple: false,
                         }"
                     />
+                    <Field
+                        v-model="form.banner"
+                        :field="{
+                            type: 'file_upload',
+                            name: 'banner',
+                            multiple: false,
+                        }"
+                    />
                 </div>
             </div>
         </template>

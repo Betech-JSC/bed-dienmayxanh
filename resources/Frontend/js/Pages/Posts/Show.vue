@@ -14,7 +14,7 @@
                         <h1 class="display-3 font-bold font-display text-black-fks">
                             {{ post.title }}
                         </h1>
-                        <div class="body-1 text-black-fks font-beau">{{ post.description }}</div>
+                        <div class="body-1 text-black-fks font-beau prose" v-html="post.description"></div>
                     </div>
                     <div class="col-span-full">
                         <div class="rounded-3xl overflow-hidden">
