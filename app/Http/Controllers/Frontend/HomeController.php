@@ -22,6 +22,7 @@ class HomeController extends Controller
 
             $services = Service::query()
                 ->active()
+                ->where('type_post', Post::DICH_VU_KHAC)
                 ->sortByPosition()
                 ->take(3)
                 ->get()
