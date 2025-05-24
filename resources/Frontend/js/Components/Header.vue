@@ -16,7 +16,7 @@
                     <div
                         class="absolute left-0 mt-[-2px] top-full bg-white text-black shadow-lg rounded p-3 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition"
                     >
-                        <ul class="space-y-2 list-disc">
+                        <ul class="space-y-2">
                             <li v-for="(item, index) in $page.props.data.post_about" :key="index">
                                 <Link :href="route('posts.show', item.slug)" class="hover:text-blue-600 text-gray-700">
                                     {{ item.title }}
@@ -32,7 +32,7 @@
                     <div
                         class="absolute left-0 mt-[-2px] top-full bg-white text-black shadow-lg rounded p-3 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition"
                     >
-                        <ul class="space-y-2 list-disc">
+                        <ul class="space-y-2">
                             <li v-for="(item, index) in $page.props.data.post_maylanh" :key="index">
                                 <Link :href="route('posts.show', item.slug)" class="hover:text-blue-600 text-gray-700">
                                     {{ item.title }}
@@ -48,7 +48,7 @@
                     <div
                         class="absolute left-0 mt-[-2px] top-full bg-white text-black shadow-lg rounded p-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition"
                     >
-                        <ul class="space-y-2 list-disc">
+                        <ul class="space-y-2">
                             <li v-for="(item, index) in $page.props.data.post_dien_lanh_cong_nghiep" :key="index">
                                 <Link :href="route('posts.show', item.slug)" class="hover:text-blue-600 text-gray-700">
                                     {{ item.title }}
@@ -65,7 +65,7 @@
                         v-if="$page.props.data.post_service && $page.props.data.post_service.length"
                         class="absolute left-0 mt-[-2px] top-full bg-white text-black shadow-lg rounded p-3 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition"
                     >
-                        <ul class="space-y-2 list-disc">
+                        <ul class="space-y-2">
                             <li v-for="(item, index) in $page.props.data.post_service" :key="index">
                                 <Link :href="route('posts.show', item.slug)" class="hover:text-blue-600 text-gray-700">
                                     {{ item.title }}
