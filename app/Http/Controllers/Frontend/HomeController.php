@@ -22,7 +22,7 @@ class HomeController extends Controller
 
             $services = Post::query()
                 ->active()
-                ->where('type_post', Post::DICH_VU_KHAC)
+                ->where('type_post', Post::MAYLANH)
                 ->orderByDesc('id')
                 ->take(3)
                 ->get()
