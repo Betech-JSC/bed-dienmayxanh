@@ -23,7 +23,7 @@ class HomeController extends Controller
             $services = Post::query()
                 ->active()
                 ->where('type_post', Post::DICH_VU_KHAC)
-                ->sortByPosition()
+                ->orderByDesc('id')
                 ->take(3)
                 ->get()
                 ->map(fn($item) => $item->transform());
