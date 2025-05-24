@@ -22,18 +22,17 @@ class ProductController extends Controller
                 ->whereSlug($slug)
                 ->firstOrFail();
 
-            $relatedProducts = $product->related();
 
             $data = [
-                'product' => $product->transformDetails(),
-                'related_products' => $relatedProducts,
+                'post' => $product->transformDetails(),
+                'seo' => $product->transformSeo()
             ];
 
             if (request()->wantsJson()) {
                 return response()->json($data);
             }
 
-            return Inertia::render('Products/Show', $data)
+            return Inertia::render('Posts/Show', $data)
                 ->withViewData(['seo' => $product->transformSeo()]);
         } catch (\Throwable $th) {
             dd($th);

@@ -12,12 +12,20 @@
                 class="item item_child group"
                 ref="items"
             >
-                <img
-                    :src="itemTop.image.url"
-                    :alt="itemTop.image.alt"
-                    class="object-cover w-full h-full pointer-events-none"
-                    draggable="false"
-                />
+                <Link
+                    :href="
+                        route('products.show', {
+                            slug: itemTop.slug ?? '',
+                        })
+                    "
+                >
+                    <img
+                        :src="itemTop.image.url"
+                        :alt="itemTop.image.alt"
+                        class="object-cover w-full h-full pointer-events-none"
+                        draggable="false"
+                    />
+                </Link>
             </div>
         </div>
     </div>

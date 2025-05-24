@@ -33,10 +33,7 @@
                 </div>
             </div>
             <div class="mt-8 text-center text-sm border-t pt-4">
-                <p>
-                    © 2025. Website thương mại điện tử kythuatlanh.com. Công ty Cổ phần Dịch Vụ Lắp đặt - Sửa chữa - Bảo
-                    hành Tận Tâm.
-                </p>
+                <p>© 2025. Công Ty TNHH Thương Mại Kỹ Thuật Lạnh Hải Đăng</p>
             </div>
         </div>
     </footer>

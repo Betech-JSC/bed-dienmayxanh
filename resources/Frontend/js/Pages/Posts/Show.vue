@@ -68,7 +68,7 @@ export default {
         const homeBreadcrumb = { name: 'Trang chủ', url: '/' }
         let breadcrumbs = [homeBreadcrumb]
 
-        if (this.post.type === 'POST') {
+        if (this.post?.type === 'POST') {
             breadcrumbs.push(
                 {
                     name: this.post.category?.title,
@@ -82,21 +82,7 @@ export default {
 
         return { breadcrumbs, activeText: '', collapseActive: false }
     },
-    methods: {
-        renderTitle(item) {
-            switch (item.type) {
-                case 'SERVICE':
-                    return 'Dịch vụ'
-
-                case 'POST':
-                    return item.category?.title
-                case 'ADVISER':
-                    return 'Cố vấn'
-                default:
-                    break
-            }
-        },
-    },
+    methods: {},
 
     mounted() {
         window.addEventListener('scroll', this.handleScroll)

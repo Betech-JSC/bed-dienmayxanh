@@ -37,6 +37,7 @@ class Product extends BaseModel
         'is_featured',
         'is_new',
         'is_stock',
+        'is_stock',
         'view_count',
         'images',
         'image',
@@ -502,10 +503,7 @@ class Product extends BaseModel
 
     public function scopeActive(Builder $query)
     {
-        return $query->where('products.status', self::STATUS_ACTIVE)
-            ->whereHas('courses', function ($query) {
-                $query->active();
-            });
+        return $query->where('products.status', self::STATUS_ACTIVE);
     }
 
     public function scopeIsFeatured(Builder $query)
