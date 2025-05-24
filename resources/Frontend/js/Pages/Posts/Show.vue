@@ -19,10 +19,10 @@
                     <div class="col-span-full">
                         <div class="rounded-3xl overflow-hidden">
                             <div class="aspect-w-2 aspect-h-1">
-                                <img
+                                <JPicture
                                     :src="post.image?.url || '/assets/images/cover.webp'"
                                     :alt="post.image?.alt || post.title"
-                                    class="object-cover w-full h-full"
+                                    class="w-full h-full"
                                 />
                             </div>
                         </div>
