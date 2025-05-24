@@ -26,7 +26,7 @@
             </div>
         </section>
 
-        <section class="md:py-[80px] py-[48px] relative overflow-hidden">
+        <section class="relative overflow-hidden">
             <div class="grid grid-cols-12 space-y-8 container">
                 <div class="lg:col-span-6 lg:col-start-4 col-span-full text-center space-y-6">
                     <p class="display-2 font-bold font-display text-[#18191E]">Sản phẩm</p>
