@@ -35,12 +35,6 @@ class HandleInertiaFrontendRequests extends Middleware
             ->get()
             ->map(fn($item) => $item->transform());
 
-        $prizes = Post::query()
-            ->active()
-            ->wherePrizes()
-            ->get()
-            ->map(fn($item) => $item->transform());
-
         $learning_env = Post::query()
             ->active()
             ->whereLearningEnv()
@@ -137,12 +131,8 @@ class HandleInertiaFrontendRequests extends Middleware
                 'post_dien_lanh_cong_nghiep' => $post_dien_lanh_cong_nghiep,
                 'post_post' => $post_post,
 
-                'prizes' => $post_about,
-                'learning_env' => $learning_env,
-                'footer_courses' => $footerCourses,
                 'members' => $members,
                 'policies' => $policies,
-                'faqs' => $faqs,
                 'banner' => [
                     'banner_home' => $banner_home,
                     'banner_about_1' => $banner_about_1,
