@@ -255,8 +255,7 @@ class Post extends BaseModel
 
     public function getIsActiveAttribute()
     {
-        return $this->status === self::STATUS_ACTIVE &&
-            $this->published_at <= now();
+        return $this->status === self::STATUS_ACTIVE;
     }
 
     public function scopeActive($query)
