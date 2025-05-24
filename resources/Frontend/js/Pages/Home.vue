@@ -5,7 +5,7 @@
             :slides="sliders"
             class="pt-[74px] lg:pt-[90px] xl:pt-[112px] w-full bg-cover bg-center bg-no-repeat"
         />
-        <div class="bg-gray-100 py-8">
+        <div class="pt-[48px]">
             <div class="container mx-auto text-center space-y-[32px]">
                 <h2 class="text-2xl font-bold text-gray-800 mb-6">Kỹ Thuật Lạnh Hải Đăng Cam kết</h2>
 

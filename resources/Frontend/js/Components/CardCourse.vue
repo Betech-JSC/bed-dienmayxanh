@@ -58,7 +58,7 @@
                 </div>
                 <Link
                     :href="
-                        route('services.show', {
+                        route('posts.show', {
                             slug: course.slug ?? '',
                         })
                     "

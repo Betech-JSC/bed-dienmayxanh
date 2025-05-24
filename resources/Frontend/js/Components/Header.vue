@@ -149,9 +149,9 @@
                         </li>
                     </ul>
                 </li>
-                <li>
+                <strong>
                     <Link :href="route('posts')" class="hover:text-blue-600">Kinh nghiệm sử dụng</Link>
-                </li>
+                </strong>
                 <li>
                     <a href="tel:0977333965" class="block text-blue-600 font-bold">Gọi: 0977333965</a>
                 </li>
