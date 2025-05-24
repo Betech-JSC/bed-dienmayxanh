@@ -102,7 +102,6 @@ class HandleInertiaFrontendRequests extends Middleware
         $banner_resource = Slider::getByPosition('BANNER_RESOURCE');
         $banner_service = Slider::getByPosition('BANNER_SERVICE');
 
-        dd($post_service);
         $global = cache_response(
             'global_settings',
             function () {
