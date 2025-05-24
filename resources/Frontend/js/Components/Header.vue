@@ -110,9 +110,12 @@
                     <strong>Giới thiệu</strong>
                     <ul class="ml-4 text-sm space-y-2">
                         <li v-for="(item, index) in $page.props.data.post_about" :key="index">
-                            <Link :href="route('posts.show', item.slug)" class="hover:text-blue-600">{{
-                                item.title
-                            }}</Link>
+                            <Link
+                                @click="isMobileMenuOpen = false"
+                                :href="route('posts.show', item.slug)"
+                                class="hover:text-blue-600"
+                                >{{ item.title }}</Link
+                            >
                         </li>
                     </ul>
                 </li>
@@ -120,9 +123,12 @@
                     <strong>Máy lạnh</strong>
                     <ul class="ml-4 text-sm space-y-2">
                         <li v-for="(item, index) in $page.props.data.post_maylanh" :key="index">
-                            <Link :href="route('posts.show', item.slug)" class="hover:text-blue-600">{{
-                                item.title
-                            }}</Link>
+                            <Link
+                                @click="isMobileMenuOpen = false"
+                                :href="route('posts.show', item.slug)"
+                                class="hover:text-blue-600"
+                                >{{ item.title }}</Link
+                            >
                         </li>
                     </ul>
                 </li>
@@ -130,9 +136,12 @@
                     <strong>Điện lạnh công nghiệp</strong>
                     <ul class="ml-4 text-sm space-y-2">
                         <li v-for="(item, index) in $page.props.data.post_dien_lanh_cong_nghiep" :key="index">
-                            <Link :href="route('posts.show', item.slug)" class="hover:text-blue-600">{{
-                                item.title
-                            }}</Link>
+                            <Link
+                                @click="isMobileMenuOpen = false"
+                                :href="route('posts.show', item.slug)"
+                                class="hover:text-blue-600"
+                                >{{ item.title }}</Link
+                            >
                         </li>
                     </ul>
                 </li>
@@ -143,14 +152,19 @@
                         class="ml-4 text-sm space-y-2"
                     >
                         <li v-for="(item, index) in $page.props.data.post_service" :key="index">
-                            <Link :href="route('posts.show', item.slug)" class="hover:text-blue-600">{{
-                                item.title
-                            }}</Link>
+                            <Link
+                                @click="isMobileMenuOpen = false"
+                                :href="route('posts.show', item.slug)"
+                                class="hover:text-blue-600"
+                                >{{ item.title }}</Link
+                            >
                         </li>
                     </ul>
                 </li>
                 <strong>
-                    <Link :href="route('posts')" class="hover:text-blue-600">Kinh nghiệm sử dụng</Link>
+                    <Link @click="isMobileMenuOpen = false" :href="route('posts')" class="hover:text-blue-600"
+                        >Kinh nghiệm sử dụng</Link
+                    >
                 </strong>
                 <li>
                     <a href="tel:0977333965" class="block text-blue-600 font-bold">Gọi: 0977333965</a>
