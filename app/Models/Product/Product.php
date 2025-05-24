@@ -88,6 +88,7 @@ class Product extends BaseModel
     protected $casts = [
         'images' => 'array',
         'image' => 'array',
+        'banner' => 'array',
     ];
 
     public function rules()
