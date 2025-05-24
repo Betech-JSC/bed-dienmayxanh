@@ -78,7 +78,6 @@ class HandleInertiaFrontendRequests extends Middleware
             ->map(fn($item) => $item->transform());
 
         $post_service = Post::query()
-            ->active()
             ->where('type_post', Post::DICH_VU_KHAC)
             ->get()
             ->map(fn($item) => $item->transform());
@@ -103,6 +102,7 @@ class HandleInertiaFrontendRequests extends Middleware
         $banner_resource = Slider::getByPosition('BANNER_RESOURCE');
         $banner_service = Slider::getByPosition('BANNER_SERVICE');
 
+        dd($post_service);
         $global = cache_response(
             'global_settings',
             function () {
@@ -130,6 +130,7 @@ class HandleInertiaFrontendRequests extends Middleware
                 'name' => $request->route()->getName(),
                 'query' => $request->query(),
             ],
+
             'data' => [
                 'post_about' => $post_about,
                 'post_service' => $post_service,

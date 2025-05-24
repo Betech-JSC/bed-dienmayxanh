@@ -261,8 +261,7 @@ class Post extends BaseModel
     public function scopeActive($query)
     {
         return $query->whereLocaleActive()
-            ->where('status', self::STATUS_ACTIVE)
-            ->where('published_at', '<=', now());
+            ->where('status', self::STATUS_ACTIVE);
     }
 
     public function scopeWhereMenuFooter($query)
