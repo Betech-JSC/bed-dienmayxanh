@@ -20,7 +20,7 @@ class HomeController extends Controller
             // Get Home Slider
             $sliders = Slider::getByPosition('HOME_SLIDER');
 
-            $services = Service::query()
+            $services = Post::query()
                 ->active()
                 ->where('type_post', Post::DICH_VU_KHAC)
                 ->sortByPosition()
