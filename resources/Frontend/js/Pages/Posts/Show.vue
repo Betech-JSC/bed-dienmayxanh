@@ -18,11 +18,11 @@
                     </div>
                     <div class="col-span-full">
                         <div class="rounded-3xl overflow-hidden">
-                            <div class="">
+                            <div class="aspect-w-2 aspect-h-1">
                                 <JPicture
-                                    :src="post.image?.url || '/assets/images/cover.webp'"
-                                    :alt="post.image?.alt || post.title"
-                                    class="w-full h-full"
+                                    :src="post.banner?.url || '/assets/images/cover.webp'"
+                                    :alt="post.banner?.alt || post.title"
+                                    class="object-cover w-full h-full"
                                 />
                             </div>
                         </div>
