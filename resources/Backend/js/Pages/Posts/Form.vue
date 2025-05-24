@@ -66,27 +66,11 @@
                         }"
                     />
                     <Field
-                        v-model="form.published_at"
-                        :field="{
-                            type: 'date',
-                            name: 'published_at',
-                            label: 'Ngày xuất bản',
-                        }"
-                    />
-                    <Field
                         v-model="form.position"
                         :field="{
                             type: 'number',
                             name: 'position',
                             label: 'Vị trí',
-                        }"
-                    />
-                    <Field
-                        v-model="form.home_position"
-                        :field="{
-                            type: 'checkbox',
-                            name: 'home_position',
-                            label: 'Nổi bật',
                         }"
                     />
                     <Field
