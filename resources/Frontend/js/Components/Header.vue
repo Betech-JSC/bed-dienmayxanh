@@ -137,7 +137,10 @@
                 </li>
                 <li>
                     <strong>Dịch vụ khác</strong>
-                    <ul class="ml-4 text-sm space-y-2">
+                    <ul
+                        v-if="$page.props.data.post_service && $page.props.data.post_service.length"
+                        class="ml-4 text-sm space-y-2"
+                    >
                         <li v-for="(item, index) in $page.props.data.post_service" :key="index">
                             <Link :href="route('posts.show', item.slug)" class="hover:text-blue-600">{{
                                 item.title

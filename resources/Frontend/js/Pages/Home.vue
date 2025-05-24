@@ -7,7 +7,7 @@
         />
         <div class="bg-gray-100 py-8">
             <div class="container mx-auto text-center space-y-[32px]">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6">Thợ Điện Máy XANH Cam kết</h2>
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Kỹ Thuật Lạnh Hải Đăng Cam kết</h2>
 
                 <ul class="grid grid-cols-2 md:grid-cols-4 gap-6">
                     <li v-for="(item, index) in commitments" :key="index" class="flex flex-col items-center">
