@@ -7,9 +7,7 @@ use App\Models\KeywordRefDate;
 use Inertia\Inertia;
 use Illuminate\Routing\Controller;
 use App\Models\Post\Post;
-use App\Models\Post\PostCategory;
 use App\Models\Product\Product;
-use App\Models\Service;
 use JamstackVietnam\Slider\Models\Slider;
 
 class HomeController extends Controller
@@ -37,7 +35,7 @@ class HomeController extends Controller
 
             $posts = Post::query()
                 ->where('status', Post::STATUS_ACTIVE)
-                ->where('type_post', Post::DIEN_LANH_CONG_NGHIEP)
+                ->where('type_post', Post::KINHNGHIEMSUDUNG)
                 ->take(3)
                 ->get()
                 ->map(fn($product) => $product->transform());
