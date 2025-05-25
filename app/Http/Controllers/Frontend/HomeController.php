@@ -37,7 +37,7 @@ class HomeController extends Controller
 
             $posts = Post::query()
                 ->where('status', Post::STATUS_ACTIVE)
-                ->where('type', Post::TYPE_POST)
+                ->where('type_post', Post::DIEN_LANH_CONG_NGHIEP)
                 ->take(3)
                 ->get()
                 ->map(fn($product) => $product->transform());
