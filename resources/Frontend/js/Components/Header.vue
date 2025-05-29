@@ -104,7 +104,10 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div v-if="isMobileMenuOpen" class="md:hidden bg-white text-gray-700 shadow-lg p-4">
+        <div
+            v-if="isMobileMenuOpen"
+            class="md:hidden bg-white text-gray-700 shadow-lg p-4 max-h-screen h-screen overflow-y-scroll"
+        >
             <ul class="space-y-4">
                 <li>
                     <strong>Giới thiệu</strong>
