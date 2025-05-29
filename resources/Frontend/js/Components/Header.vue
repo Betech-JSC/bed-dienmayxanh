@@ -106,7 +106,7 @@
         <!-- Mobile Menu -->
         <div
             v-if="isMobileMenuOpen"
-            class="md:hidden bg-white text-gray-700 shadow-lg p-4 max-h-screen h-screen overflow-y-scroll"
+            class="md:hidden bg-white text-gray-700 shadow-lg p-4 max-h-[500px] overflow-y-scroll"
         >
             <ul class="space-y-4">
                 <li>
