@@ -177,8 +177,29 @@
     </header>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-
-const isMobileMenuOpen = ref(false)
+<script >
+export default {
+    data() {
+        return {
+            isMobileMenuOpen: false,
+        }
+    },
+    watch: {
+        isMobileMenuOpen(isOpen) {
+            if (isOpen) {
+                document.body.classList.add('overflow-hidden')
+            } else {
+                document.body.classList.remove('overflow-hidden')
+            }
+        },
+    },
+    data() {
+        return {
+            isMobileMenuOpen: false,
+        }
+    },
+    beforeDestroy() {
+        document.body.classList.remove('overflow-hidden')
+    },
+}
 </script>

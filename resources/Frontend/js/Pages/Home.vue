@@ -11,7 +11,7 @@
 
                 <ul class="grid grid-cols-2 md:grid-cols-4 gap-6">
                     <li v-for="(item, index) in commitments" :key="index" class="flex flex-col items-center">
-                        <img :src="item.image" :alt="item.title" class="w-16 h-16" />
+                        <JPicture :src="item.image" :alt="item.title" class="w-16 h-16" />
                         <p class="mt-2 text-gray-700 font-medium">{{ item.title }}</p>
                     </li>
                 </ul>
@@ -145,19 +145,19 @@ export default {
             commitments: [
                 {
                     title: 'ĐÚNG HẸN',
-                    image: 'https://img.tgdd.vn/imgt/f_webp,s_120x120,fit_outside/https://cdn.tgdd.vn/mwgcart/tan-tam//images/common/img_commit-0.H.png',
+                    image: '/assets/images/dung-lich-hen-01.png',
                 },
                 {
                     title: 'TAY NGHỀ GIỎI',
-                    image: 'https://img.tgdd.vn/imgt/f_webp,s_120x120,fit_outside/https://cdn.tgdd.vn/mwgcart/tan-tam//images/common/img_commit-2.H.png',
+                    image: '/assets/images/tay-nghe-cao-02.png',
                 },
                 {
                     title: 'TRUNG THỰC',
-                    image: 'https://img.tgdd.vn/imgt/f_webp,s_120x120,fit_outside/https://cdn.tgdd.vn/mwgcart/tan-tam//images/common/img_commit-4.H.png',
+                    image: '/assets/images/minh-bach-03.png',
                 },
                 {
                     title: 'THÂN THIỆN & VUI VẺ',
-                    image: 'https://img.tgdd.vn/imgt/f_webp,s_120x120,fit_outside/https://cdn.tgdd.vn/mwgcart/tan-tam//images/common/img_commit-6.H.png',
+                    image: '/assets/images/than-thien-04.png',
                 },
             ],
 
