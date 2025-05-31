@@ -18,7 +18,7 @@
                     </div>
                     <div class="col-span-full grid grid-cols-4 md:gap-[24px] gap-[12px]">
                         <div v-for="(item, index) in post.images" class="col-span-2 md:col-span-1">
-                            <div class="aspect-w-2 aspect-h-1 min-h-[252px]">
+                            <div class="aspect-w-2 aspect-h-1 min-h-[252px] cursor-pointer" @click="openModal(index)">
                                 <JPicture
                                     :src="item?.url || '/assets/images/cover.webp'"
                                     :alt="item?.alt || item.title"
@@ -33,50 +33,121 @@
                 </div>
             </div>
         </section>
+        <!-- Modal overlay -->
+        <transition name="fade">
+            <div v-if="showModal" class="fixed inset-0 z-50 flex items-center justify-center" @click.self="closeModal">
+                <!-- Black background full screen -->
+                <div class="absolute inset-0 bg-black-fks opacity-80 z-0"></div>
+
+                <!-- Modal content -->
+                <div class="relative z-10 w-full px-4 animate-scale">
+                    <div class="relative rounded-lg overflow-hidden shadow-xl flex items-center justify-center h-full">
+                        <div class="flex items-center justify-center">
+                            <img
+                                :src="currentImage?.url"
+                                :alt="currentImage?.alt || 'Image'"
+                                class="object-contain w-[1280px] h-[853px]"
+                            />
+                        </div>
+
+                        <!-- Close button -->
+                        <button
+                            @click="closeModal"
+                            class="absolute top-2 right-2 bg-black-fks text-white w-[40px] h-[40px] bg-black rounded-full p-2 hover:bg-gray-800 z-20 flex items-center justify-center"
+                        >
+                            <p>✕</p>
+                        </button>
+
+                        <!-- Prev button -->
+                        <button
+                            @click="prevImage"
+                            class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black-fks text-white w-[40px] h-[40px] bg-black rounded-full p-2 hover:bg-gray-800 z-20 flex items-center justify-center"
+                        >
+                            <p>‹</p>
+                        </button>
+
+                        <!-- Next button -->
+                        <button
+                            @click="nextImage"
+                            class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black-fks text-white w-[40px] h-[40px] bg-black rounded-full p-2 hover:bg-gray-800 z-20 flex items-center justify-center"
+                        >
+                            <p>›</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </transition>
     </main>
 </template>
 
 <script>
 export default {
-    props: ['related_posts', 'post'],
-    components: {},
+    props: ['post'],
     data() {
-        const homeBreadcrumb = { name: 'Trang chủ', url: '/' }
-        let breadcrumbs = [homeBreadcrumb]
-
-        if (this.post.type === 'POST') {
-            breadcrumbs.push(
-                {
-                    name: this.post.category?.title,
-                    url: this.route('posts.categories', {
-                        categorySlug: this.post.category?.slug,
-                    }),
-                },
-                { name: this.post.title }
-            )
+        return {
+            showModal: false,
+            currentIndex: 0,
         }
-
-        return { breadcrumbs, activeText: '', collapseActive: false }
+    },
+    computed: {
+        currentImage() {
+            return this.post.images[this.currentIndex] || {}
+        },
     },
     methods: {
-        renderTitle(item) {
-            switch (item.type) {
-                case 'SERVICE':
-                    return 'Dịch vụ'
-
-                case 'POST':
-                    return item.category?.title
-                case 'ADVISER':
-                    return 'Cố vấn'
-                default:
-                    break
+        openModal(index) {
+            this.currentIndex = index
+            this.showModal = true
+            document.addEventListener('keydown', this.handleKeyDown)
+        },
+        closeModal() {
+            this.showModal = false
+            document.removeEventListener('keydown', this.handleKeyDown)
+        },
+        nextImage() {
+            this.currentIndex = (this.currentIndex + 1) % this.post.images.length
+        },
+        prevImage() {
+            this.currentIndex = (this.currentIndex - 1 + this.post.images.length) % this.post.images.length
+        },
+        handleKeyDown(e) {
+            if (e.key === 'Escape') {
+                this.closeModal()
+            } else if (e.key === 'ArrowRight') {
+                this.nextImage()
+            } else if (e.key === 'ArrowLeft') {
+                this.prevImage()
             }
         },
     },
-
-    mounted() {
-        window.addEventListener('scroll', this.handleScroll)
+    beforeUnmount() {
+        document.removeEventListener('keydown', this.handleKeyDown)
     },
 }
 </script>
-<style lang="scss" scoped></style>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.animate-scale {
+    animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+</style>
+
