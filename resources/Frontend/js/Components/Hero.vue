@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="container">
+        <div class="container max-md:pt-[32px]">
             <JamSlider
                 v-if="slides && slides.length > 0"
                 :config="{
