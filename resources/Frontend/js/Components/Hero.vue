@@ -33,7 +33,7 @@
                                 />
                                 <!-- Nút play -->
                                 <div
-                                    class="absolute inset-0 flex items-center justify-center z-10 bg-black bg-opacity-50"
+                                    class="absolute inset-0 flex items-center justify-center z-1 bg-black bg-opacity-50"
                                 >
                                     <button
                                         class="flex items-center justify-center w-16 h-16 rounded-full bg-white hover:bg-gray-300 shadow-lg"
@@ -77,7 +77,7 @@
                 </div>
 
                 <template #appends="{ selectedIndex, navigate }">
-                    <div class="relative z-10">
+                    <div class="relative z-1">
                         <div class="flex items-center justify-center py-[14px]">
                             <div
                                 class="flex items-center space-x-2 max-md:justify-center py-[6px] px-2 bg-gray-warm-200 backdrop-blur-[20px] rounded-[800px]"
