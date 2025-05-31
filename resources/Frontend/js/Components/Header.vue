@@ -77,7 +77,7 @@
 
                 <!-- Kinh nghiệm sử dụng -->
                 <Link :href="route('posts')" class="hover:text-blue-400 transition"> Kinh nghiệm sử dụng </Link>
-                <Link :href="route('members.index')" class="hover:text-blue-400 transition"> Nhật kí thi công </Link>
+                <Link :href="route('members.index')" class="hover:text-blue-400 transition"> Nhật ký thi công </Link>
             </div>
 
             <!-- Mobile Hamburger -->
@@ -168,6 +168,11 @@
                 <strong>
                     <Link @click="isMobileMenuOpen = false" :href="route('posts')" class="hover:text-blue-600"
                         >Kinh nghiệm sử dụng</Link
+                    >
+                </strong>
+                <strong>
+                    <Link @click="isMobileMenuOpen = false" :href="route('members.index')" class="hover:text-blue-600"
+                        >Nhật ký thi công</Link
                     >
                 </strong>
                 <li>
