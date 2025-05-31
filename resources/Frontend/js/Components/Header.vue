@@ -1,5 +1,5 @@
 <template>
-    <header class="fixed top-0 left-0 w-full shadow-md bg-[#082680] text-white z-[99]">
+    <header class="fixed top-0 left-0 w-full shadow-md bg-[#082680] text-white z-[1]">
         <div class="container mx-auto flex justify-between items-center py-3 px-4">
             <!-- Logo -->
             <div class="flex items-center space-x-4">
@@ -9,7 +9,7 @@
             </div>
 
             <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-6">
+            <div class="hidden md:flex items-center space-x-4">
                 <!-- Giới thiệu -->
                 <div class="relative group pointer-events-auto">
                     <div class="cursor-pointer px-4 hover:text-blue-400">Giới thiệu</div>
@@ -77,6 +77,7 @@
 
                 <!-- Kinh nghiệm sử dụng -->
                 <Link :href="route('posts')" class="hover:text-blue-400 transition"> Kinh nghiệm sử dụng </Link>
+                <Link :href="route('members.index')" class="hover:text-blue-400 transition"> Nhật kí thi công </Link>
             </div>
 
             <!-- Mobile Hamburger -->

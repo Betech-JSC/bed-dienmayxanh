@@ -40,6 +40,7 @@ Route::middleware(['meta_seo'])->group(function () {
             Route::get(Lang::uri('posts'), 'index')->name('posts');
             Route::get(Lang::uri('posts') . '/{slug}', 'show')->name('posts.show');
 
+            Route::get('/nhat-ky-thi-cong', 'memories')->name('members.index');
             Route::get('/nhat-ky-thi-cong' . '/{slugMember}', 'showMember')->name('members.show');
         });
 

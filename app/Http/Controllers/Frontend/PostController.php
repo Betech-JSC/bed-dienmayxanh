@@ -48,6 +48,32 @@ class PostController extends Controller
         }
     }
 
+    public function memories()
+    {
+        try {
+            $posts = Post::query()
+                ->where('status', Post::STATUS_ACTIVE)
+                ->where('type', Post::TYPE_MEMBER)
+                ->orderBy('id', 'desc')
+                ->get()
+                ->map(fn($item) => $item->transform());
+
+            $images = $posts->flatMap(fn($post) => $post['images'])->values()->all();
+
+            $data = [
+                'images' => $images,
+            ];
+
+            if (request()->wantsJson()) {
+                return response()->json($data);
+            }
+
+            return Inertia::render('Posts/Memories', $data);
+        } catch (\Throwable $th) {
+            dd($th);
+        }
+    }
+
     public function show($slug)
     {
         try {
