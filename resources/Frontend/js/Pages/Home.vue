@@ -19,7 +19,7 @@
         </div>
         <section class="md:py-[80px] py-[48px]">
             <div v-if="services && services.length" class="space-y-20">
-                <div class="container md:grid grid-cols-2 lg:grid-cols-3 md:gap-6 xl:gap-8">
+                <div class="container md:grid grid-cols-2 lg:grid-cols-3 gap-[32px]">
                     <p class="col-span-full display-2 font-bold font-display text-[#18191E] text-center">Dịch vụ</p>
                     <CardCourse v-for="(course, index) in services" :key="index" :course="course" :isHome="true" />
                 </div>
